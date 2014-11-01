@@ -1,0 +1,9 @@
+body#tinymce.wp-editor { 
+	font-family: Georgia, "Cambria", serif;
+	color: #444;
+	line-height: 1.8em;
+}
+body#tinymce.wp-editor a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}

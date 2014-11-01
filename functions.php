@@ -17,8 +17,7 @@ function simply_pure_theme_install() {
 	if ( ! isset( $content_width ) ) $content_width = 900;
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-			'primary'   => __( 'Top primary menu', 'purecss_theme' ),
-			'secondary' => __( 'Secondary menu in left sidebar', 'purecss_theme' ),
+			'primary'   => __( 'Primary menu', 'purecss_theme' ),
 	) );
 }
 add_action( 'after_setup_theme', 'simply_pure_theme_install' );

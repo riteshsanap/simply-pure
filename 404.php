@@ -7,7 +7,7 @@
 		
 		<ul class="list404">
 			<li>Check the URL for any mistakes.</li>
-			<li>Try Visiting the <a href="<?php echo get_bloginfo('url'); ?>">Home Page</a></li>
+			<li>Try Visiting the <a href="<?php echo esc_url( home_url() ) ?>">Home Page</a></li>
 			<li>Or Try searching for the Page :
 			<?php get_template_part('searchform'); ?>
 			</li>

@@ -15,7 +15,7 @@
 	<div class="clearfix"></div>
 </div>
 <div class="footer">
-	&copy; <?php echo Date('Y'); ?> <?php bloginfo('title'); ?> - Developed by <a href="<?php echo _('http://www.best2know.info/'); ?>" class="post-category author_link">Ritesh Sanap</a>
+	&copy; <?php echo Date('Y'); ?> <?php bloginfo('title'); ?> - Theme by <a href="<?php  echo esc_url( __( 'http://wpden.net/', 'purecss' ) ); ?>" class="post-category author_link">WordPress Den</a>
 </div>
 </div><!-- end Content -->
 <?php get_sidebar(); ?>

@@ -17,7 +17,7 @@ function simply_pure_theme_install() {
 	if ( ! isset( $content_width ) ) $content_width = 900;
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-			'primary'   => __( 'Primary menu', 'purecss_theme' ),
+			'primary'   => __( 'Primary menu', 'purecss' ),
 	) );
 }
 add_action( 'after_setup_theme', 'simply_pure_theme_install' );
@@ -33,8 +33,8 @@ add_action( 'after_setup_theme', 'simply_pure_theme_install' );
  */
 function pure_sidebar_widgets() {
 	register_sidebars(3, array(
-        'name' => __('Footer - Widget Area %1$s', 'purecss_theme'),
-        'description' => __('Footer Sidebar', 'purecss_theme'),
+        'name' => __('Footer - Widget Area %1$s', 'purecss'),
+        'description' => __('Footer Sidebar', 'purecss'),
         'id' => 'footer-area',
         'before_widget' => '<div id="%1$s" class="%2$s widget">',
         'after_widget' => '</div>',
@@ -43,8 +43,8 @@ function pure_sidebar_widgets() {
     ));
 
 register_sidebars(3, array(
-        'name' => __('Post Footer - Widget Area %1$s', 'purecss_theme'),
-        'description' => __('Footer Sidebar', 'purecss_theme'),
+        'name' => __('Post Footer - Widget Area %1$s', 'purecss'),
+        'description' => __('Footer Sidebar', 'purecss'),
         'id' => 'post-footer',
         'before_widget' => '<div id="%1$s" class="%2$s widget">',
         'after_widget' => '</div>',
@@ -52,8 +52,8 @@ register_sidebars(3, array(
         'after_title' => '</h3>'
     ));
 register_sidebar(array(
-        'name' => __('Sidebar', 'purecss_theme'),
-        'description' => __('Below Header', 'purecss_theme'),
+        'name' => __('Sidebar', 'purecss'),
+        'description' => __('Below Header', 'purecss'),
         'id' => 'sidebar-area',
         'before_widget' => '<section id="%1$s" class="%2$s widget">',
         'after_widget' => '</section>',
@@ -64,7 +64,7 @@ register_sidebar(array(
 }
 add_action('widgets_init', 'pure_sidebar_widgets');
 /**
- * Add Stylesheet
+ * Add Stylesheet and scripts
  *
  * @version 1.0
  * @since   Simply Pure 1.0
@@ -72,7 +72,20 @@ add_action('widgets_init', 'pure_sidebar_widgets');
  *
  */
 function purecss_scripts_styles() {
+	/**
+	 * Enqueue StyleSheet
+	 */
 	wp_enqueue_style( 'purecss-style', get_stylesheet_uri(), array(), '0.1');
+	
+	/**
+	 * Add JavaScript to animate Sidebar, when the sidebar is active i.e. atleast has 1 widget
+	 */
+	if(is_active_sidebar('sidebar-area')) {
+		/**
+		 * The Below script should be added in the footer so $in_footer is set to true
+		 */
+		wp_enqueue_script('purecss-script', get_template_directory_uri(). '/script.js', array(), '0.1', true);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'purecss_scripts_styles' );
 
@@ -83,7 +96,7 @@ function pure_author_link() {
 
 	$link = sprintf('<a href="%1$s" title="%2$s" rel="author" itemprop="url"><span itemprop="name">%3$s</span></a>',
 		esc_url( get_author_posts_url($authId, $niceName) ),
-		esc_attr( sprintf( __( 'Posts by %s', 'purecss_theme' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'Posts by %s', 'purecss' ), get_the_author() ) ),
 		get_the_author()
 	);
 	$link = '<span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
@@ -185,7 +198,7 @@ function purecss_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'purecss_theme' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'purecss' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -243,6 +256,10 @@ function pure_body_classes($classes) {
 	} else {
 		$classes[] = 'header-half';
 	}
+
+	if(!get_theme_mod('display_avatar', true)) {
+		$classes[] = 'post-title-no-avatar';
+	}
 	return $classes;
 }
 add_filter( 'body_class', 'pure_body_classes' );
@@ -265,28 +282,3 @@ function purecss_archive_title() {
 
 	return $title;
 }
-/**
- * Add appropiate Classes for animating the header and sidebar
- *
- * @version 1.0
- * @since   Simply Pure 1.0
- * @author Ritesh Sanap <riteshsanap@gmail.com>
- *
- * @return  string   
- */
-function purecss_footer_script() { ?>
-<script>
-	window.onscroll = function animateHeader() {
-	var header = document.getElementById("pure-main-header");
-	if(window.scrollY > 50 && !header.classList.contains("animate_header") && window.innerWidth >= 768) {
-		header.classList.add("animate_header");
-		var sidebar = document.getElementById("widget-sidebar");
-		sidebar.classList.add("animate_sidebar");
-	}
-}
-</script>
-<?php }
-if(is_active_sidebar('sidebar-area')) {
-	add_action('wp_footer', 'purecss_footer_script');
-}
-?>

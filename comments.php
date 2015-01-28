@@ -13,9 +13,9 @@
     <?php wp_list_comments( array( 'style' => 'div','echo'=>1, 'callback'=>'purecss_comments','avatar_size'=>48, 'depth'=>10 ) ); ?>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text content-subhead"><?php _e( 'Comment navigation', 'purecss_theme' ); ?></h1>
-		<div class="nav-previous alignleft"><?php previous_comments_link( __( '&larr; Older Comments', 'purecss_theme' ) ); ?></div>
-		<div class="nav-next alignright"><?php next_comments_link( __( 'Newer Comments &rarr;', 'purecss_theme' ) ); ?></div>
+		<h1 class="screen-reader-text content-subhead"><?php _e( 'Comment navigation', 'purecss' ); ?></h1>
+		<div class="nav-previous alignleft"><?php previous_comments_link( __( '&larr; Older Comments', 'purecss' ) ); ?></div>
+		<div class="nav-next alignright"><?php next_comments_link( __( 'Newer Comments &rarr;', 'purecss' ) ); ?></div>
 	</nav><!-- #comment-nav-below -->
 	<?php endif; ?>
 </div>
@@ -58,7 +58,7 @@ function purecss_comments($comment, $args, $depth) {
 	<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
 	</div>
 	<?php if ( $comment->comment_approved == '0' ) : ?>
-		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','purecss_theme' ); ?></em>
+		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','purecss' ); ?></em>
 		<br />
 	<?php endif; ?>
 
@@ -69,7 +69,7 @@ function purecss_comments($comment, $args, $depth) {
 		<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 		<?php
 			/* translators: 1: date, 2: time */
-			printf( __('%1$s at %2$s', 'purecss_theme'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'purecss_theme' ), '  ', '' );
+			printf( __('%1$s at %2$s', 'purecss'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'purecss' ), '  ', '' );
 		?>
 	</div>
 
@@ -98,14 +98,14 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
  	$comments_default = array(
   'id_form'           => 'commentform',
   'id_submit'         => 'submit',
-  'title_reply'       => __( 'Leave a Reply', 'purecss_theme' ),
-  'title_reply_to'    => __( 'Leave a Reply to %s', 'purecss_theme' ),
-  'cancel_reply_link' => __( 'Cancel Reply', 'purecss_theme' ),
-  'label_submit'      => __( 'Post Comment', 'purecss_themea' ),
+  'title_reply'       => __( 'Leave a Reply', 'purecss' ),
+  'title_reply_to'    => __( 'Leave a Reply to %s', 'purecss' ),
+  'cancel_reply_link' => __( 'Cancel Reply', 'purecss' ),
+  'label_submit'      => __( 'Post Comment', 'purecss' ),
 
   'comment_field' =>  '<div class="comment-form-comment pure-control-group"><textarea id="comment" name="comment" class="pure-input-1-2" rows="8" aria-required="true" placeholder="Comment">' .
     '</textarea>'.
-    '<label for="comment">' . __( 'Comment', 'purecss_theme' ) .'</label>'.
+    '<label for="comment">' . __( 'Comment', 'purecss' ) .'</label>'.
     '</div>',
 
   'must_log_in' => '<p class="must-log-in">' .
@@ -123,7 +123,7 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
     ) . '</p>',
 
   'comment_notes_before' => '<p class="comment-notes">' .
-    __( 'Your email address will not be published.', 'purecss_theme' ) . '</p>',
+    __( 'Your email address will not be published.', 'purecss' ) . '</p>',
     'comment_notes_after' =>'',
   // 'comment_notes_after' => '<p class="form-allowed-tags">' .
   //   sprintf(
@@ -137,26 +137,26 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
       '<div class="comment-form-author pure-control-group">' .
 	  '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
       '" class="pure-input-1-2" placeholder="Name (Required)"' . $aria_req . '/>'.
-      '<label for="author">' . __( 'Name', 'purecss_theme' ) . '</label>'.
+      '<label for="author">' . __( 'Name', 'purecss' ) . '</label>'.
       '</div>',
 
     'email' =>
       '<div class="comment-form-email pure-control-group">'.
       '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
       '" class="pure-input-1-2" placeholder="Email (Required)"' . $aria_req . '/>'.
-      '<label for="email">' . __( 'Email', 'purecss_theme' ). '</label>'.
+      '<label for="email">' . __( 'Email', 'purecss' ). '</label>'.
       '</div>',
 
     'url' =>
       '<div class="comment-form-url pure-control-group">'.
       '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
       '" class="pure-input-1-2" placeholder="Website"/>'.
-      '<label for="url">' . __( 'Website', 'purecss_theme' ) . '</label>' .'</div>'
+      '<label for="url">' . __( 'Website', 'purecss' ) . '</label>' .'</div>'
     )
   ),
 ); ?>
 		<?php if ( ! comments_open() ) : ?>
-			<h6 class="no-comments content-subhead"><?php _e( 'Comments are closed.', 'purecss_theme' ); ?></h6>
+			<h6 class="no-comments content-subhead"><?php _e( 'Comments are closed.', 'purecss' ); ?></h6>
 		<?php endif; ?>
 
 <?php comment_form($comments_default); ?>

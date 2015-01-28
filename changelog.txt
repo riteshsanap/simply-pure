@@ -1,0 +1,20 @@
+/************************************************************************************/
+/*	Changelog for Simply Pure WordPress Theme	*/		
+/************************************************************************************/		
+
+/**
+ * 28/01/15 - version 1.1
+ */
+
+1. Changed footer text and link in footer.php ( also escaped url using 'esc_uri()' )
+2. Added Avatars beside Post title (also toggle option in WP Customizer)
+3. Changed Text domain from 'purecss_theme' to 'purecss'
+4. Enqueued script.js instead of using it inline
+5. Fixed default values not getting set on first install
+6. Changed Screenshot
+
+/**
+ * 2/11/2014 - version 1.0
+ */
+
+1. Initial Release

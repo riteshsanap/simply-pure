@@ -1,4 +1,6 @@
 <?php 
+
+        load_theme_textdomain('purecss');
 /************************************************************************************/
 /*	Add Theme Support	*/		
 /************************************************************************************/		
@@ -103,7 +105,7 @@ function pure_author_link() {
 	return $link;
 }
 function pure_post_time() {
-	$time = '<time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time('F j, Y') . '</time>';
+	$time = '<time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y')) . '</time>';
 	return $time;
 }
 
@@ -116,9 +118,12 @@ function pure_post_time() {
  *
  * @return  string Simple HTML string
  */
-function pure_post_meta() { ?>
-	<p class="post-meta">By <?php echo pure_author_link(); ?> <?php pure_categories(); ?> on <?php echo pure_post_time(); ?> <?php edit_post_link('Edit', ' - '); ?></p>
-<?php }
+function pure_post_meta() {
+	echo '<p class="post-meta">';
+	echo sprintf( __('By %1$s under %2$s on %3$s', 'purecss'), (string)pure_author_link(), pure_categories(), pure_post_time());
+	edit_post_link(__('Edit','purecss'), ' - ');
+	echo '</p>';
+}
 
 /**
  * Post Thumbnail
@@ -160,11 +165,12 @@ function pure_categories() {
 	if($categories){ 
 		foreach($categories as $category) {
 			$color = array_rand($colors, 1); // call One random value from the array
-			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf("View all posts in %s", $category->name ) ) . '" class="post-category '.$colors[$color].'">'.$category->cat_name.'</a>'.$separator;
+			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf(__('View all posts in %s','purecss'), $category->name ) ) . '" class="post-category '.$colors[$color].'">'.$category->cat_name.'</a>'.$separator;
 		}
-		$output = 'under <span itemprop="keywords">'. $output. '</span>';
-	echo trim($output, $separator);
+		$output = '<span itemprop="keywords">'. $output. '</span>';
+	return (trim($output, $separator));
 	}
+
 }
 
 /**

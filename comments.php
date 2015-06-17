@@ -7,7 +7,7 @@
  <div id="comments">
  	<?php $commCount = get_comments_number(); ?>
  	<?php if (($commCount !=0 && !comments_open()) || comments_open()): ?>
- 		<h3 class="content-subhead"><?php echo $commCount; ?><?php echo $commCount == 1 ? ' Comment' :' Comments' ?></h3>
+ 		<h3 class="content-subhead"><?php echo $commCount; ?> <?php echo $commCount == 1 ? __('Comment', 'purecss') : __('Comments', 'purecss') ?></h3>
  	<?php endif ?>
  <div class="comment-list">
     <?php wp_list_comments( array( 'style' => 'div','echo'=>1, 'callback'=>'purecss_comments','avatar_size'=>48, 'depth'=>10 ) ); ?>
@@ -55,7 +55,7 @@ function purecss_comments($comment, $args, $depth) {
 	<?php if(get_comment_author() == get_the_author()) { ?>
 	<span class="shield">*</span>
 	<?php } ?>
-	<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+	<?php printf( '<cite class="fn">%s</cite> <span class="says">'._x('says:','after author of a citation','purecss').'</span>', get_comment_author_link() ); ?>
 	</div>
 	<?php if ( $comment->comment_approved == '0' ) : ?>
 		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.','purecss' ); ?></em>
@@ -103,7 +103,7 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
   'cancel_reply_link' => __( 'Cancel Reply', 'purecss' ),
   'label_submit'      => __( 'Post Comment', 'purecss' ),
 
-  'comment_field' =>  '<div class="comment-form-comment pure-control-group"><textarea id="comment" name="comment" class="pure-input-1-2" rows="8" aria-required="true" placeholder="Comment">' .
+  'comment_field' =>  '<div class="comment-form-comment pure-control-group"><textarea id="comment" name="comment" class="pure-input-1-2" rows="8" aria-required="true" placeholder="'.__('Comment', 'purecss').'">' .
     '</textarea>'.
     '<label for="comment">' . __( 'Comment', 'purecss' ) .'</label>'.
     '</div>',

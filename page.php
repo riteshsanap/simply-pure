@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+load_theme_textdomain('purecss');
+?>
 	<div id="primary">
 		<?php if (have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>

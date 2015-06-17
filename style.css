@@ -8,6 +8,7 @@ Description: A Personal blogging wordpress theme, made with Yahoo's Pure CSS. Si
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, two-columns, responsive-layout, custom-menu, featured-images
+Text Domain: purecss
 */
 /*
 Pure v0.5.0
@@ -958,7 +959,7 @@ table {
 
 .pure-menu .pure-menu-heading {
   color: #565d64;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 90%;
   margin-top: .5em;
   border-bottom-width: 1px;
@@ -1775,7 +1776,7 @@ h3 {
 }
 
 .site_title {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .site_description {
@@ -2332,7 +2333,7 @@ pre {
 /************************************************************************************/
 /*	Responsive	*/
 /************************************************************************************/
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   body {
     margin: 0;
   }

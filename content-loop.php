@@ -1,7 +1,7 @@
 		<?php if (have_posts()) : $postCount = 0; $sticky = 0;?>
 		<?php while(have_posts()) : the_post(); $postCount++; ?>
-		<?php if(is_home()) : ?>	
-		<?php if (is_sticky() ) { 
+		<?php if(is_home()) : ?>
+		<?php if (is_sticky() ) {
 			$sticky++;
 			echo '<h6 class="content-subhead">'.__('Sticky Posts', 'purecss').'</h6>';
 		 } elseif( ($sticky!=0 && $postCount == $sticky+1) || ($sticky==0 && $postCount==1)) {

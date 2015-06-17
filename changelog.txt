@@ -3,6 +3,15 @@
 /************************************************************************************/		
 
 /**
+  * 17/06/15 - version 1.2
+  */
+1. Correct some things for localization
+2. Propose a .pot file
+3. Add first version of a fr_FR.po
+4. Small bugfixes
+
+
+/**
  * 28/01/15 - version 1.1
  */
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Wed Jun 17 2015 18:27:19 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Wed Jun 17 2015 18:47:56 GMT+0200 (CEST)\n"
 "Last-Translator: Sebseb01 <webmaster@sebseb01.net>\n"
 "Language-Team: \n"
 "Language: French (France)\n"
@@ -207,12 +207,28 @@ msgstr "Voir tous les articles dans %s"
 #: ../functions.php:170
 msgctxt "Before categories"
 msgid "Under"
-msgstr "Sous"
+msgstr "Mots clés"
 
 #: ../functions.php:207
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
+
+#: ../functions.php:277
+msgid "Archive: "
+msgstr "Archives : "
+
+#: ../functions.php:280
+msgid "Category: "
+msgstr "Catégorie : "
+
+#: ../functions.php:283
+msgid "Tag: "
+msgstr "Mots clés : "
+
+#: ../functions.php:286
+msgid "Author: "
+msgstr "Auteur : "
 
 #: ../content-loop.php:6
 msgid "Sticky Posts"

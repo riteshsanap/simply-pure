@@ -273,17 +273,17 @@ require get_template_directory(). '/customizer.php';
 
 function purecss_archive_title() {
 	$title = NULL;
-	if(is_archive()) { 
-		$title = 'Archive: '. single_month_title(' ', false);
+	if(is_archive()) {
+		$title = __('Archive: ','purecss'). single_month_title(' ', false);
 	}
 	if(is_category()) {
-		  $title = 'Category: '. single_cat_title('', false); 
+		  $title = __('Category: ','purecss'). single_cat_title('', false);
 	}
 	if(is_tag()) {
-		 $title = 'Tag: '. single_tag_title('', false);
+		 $title = __('Tag: ','purecss'). single_tag_title('', false);
 	}
 	if(is_author()) {
-		$title = 'Author: '. get_the_author();
+		$title = __('Author: ','purecss'). get_the_author();
 	}
 
 	return $title;

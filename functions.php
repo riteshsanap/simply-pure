@@ -101,11 +101,11 @@ function pure_author_link() {
 		esc_attr( sprintf( __( 'Posts by %s', 'purecss' ), get_the_author() ) ),
 		get_the_author()
 	);
-	$link = '<span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
+	$link = _x('Published by','author of a post','purecss').' <span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
 	return $link;
 }
 function pure_post_time() {
-	$time = '<time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y')) . '</time>';
+	$time = _x('on','Publication date','purecss').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y')) . '</time>';
 	return $time;
 }
 
@@ -120,7 +120,7 @@ function pure_post_time() {
  */
 function pure_post_meta() {
 	echo '<p class="post-meta">';
-	echo sprintf( __('By %1$s under %2$s on %3$s', 'purecss'), (string)pure_author_link(), pure_categories(), pure_post_time());
+	echo sprintf( _x('%1$s %2$s %3$s','Meta informations order', 'purecss'), pure_author_link(), pure_categories(), pure_post_time());
 	edit_post_link(__('Edit','purecss'), ' - ');
 	echo '</p>';
 }
@@ -167,7 +167,7 @@ function pure_categories() {
 			$color = array_rand($colors, 1); // call One random value from the array
 			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf(__('View all posts in %s','purecss'), $category->name ) ) . '" class="post-category '.$colors[$color].'">'.$category->cat_name.'</a>'.$separator;
 		}
-		$output = '<span itemprop="keywords">'. $output. '</span>';
+		$output = _x('Under','Before categories','purecss').'<span itemprop="keywords">'. $output. '</span>';
 	return (trim($output, $separator));
 	}
 

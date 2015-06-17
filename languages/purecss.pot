@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Wed Jun 17 2015 11:41:50 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Wed Jun 17 2015 18:25:43 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,6 +24,14 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: ../pagination.php:2
+msgid "&laquo; Previous Entries"
+msgstr ""
+
+#: ../pagination.php:3
+msgid "Next Entries &raquo;"
+msgstr ""
+
 #: ../customizer.php:19
 msgid "Sidebar Position"
 msgstr ""
@@ -40,7 +48,7 @@ msgstr ""
 msgid "Display Avatar next to Post title"
 msgstr ""
 
-#: ../comments.php:10 ../comments.php:108
+#: ../comments.php:10 ../comments.php:106 ../comments.php:108
 msgid "Comment"
 msgstr ""
 
@@ -163,22 +171,28 @@ msgstr ""
 msgid "Posts by %s"
 msgstr ""
 
+#: ../functions.php:104
+msgctxt "author of a post"
+msgid "Published by"
+msgstr ""
+
+#: ../functions.php:108
+msgctxt "Publication date"
+msgid "on"
+msgstr ""
+
 # format of date for meta on post
 #: ../functions.php:108
 msgid "F j, Y"
 msgstr ""
 
-# Meta information on a posts
-# 
-# 
 # %1$s is Name
-# 
 # %2$s is Categories
-# 
 # %3$s is Date
 #: ../functions.php:123
 #, php-format
-msgid "By %1$s under %2$s on %3$s"
+msgctxt "Meta informations order"
+msgid "%1$s %2$s %3$s"
 msgstr ""
 
 #: ../functions.php:124
@@ -188,6 +202,11 @@ msgstr ""
 #: ../functions.php:168
 #, php-format
 msgid "View all posts in %s"
+msgstr ""
+
+#: ../functions.php:170
+msgctxt "Before categories"
+msgid "Under"
 msgstr ""
 
 #: ../functions.php:207

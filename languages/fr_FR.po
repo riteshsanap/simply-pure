@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Wed Jun 17 2015 11:42:17 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Wed Jun 17 2015 18:27:19 GMT+0200 (CEST)\n"
 "Last-Translator: Sebseb01 <webmaster@sebseb01.net>\n"
 "Language-Team: \n"
 "Language: French (France)\n"
@@ -22,6 +22,14 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Loco-Target-Locale: fr_FR"
 
+#: ../pagination.php:2
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Entrée précédente"
+
+#: ../pagination.php:3
+msgid "Next Entries &raquo;"
+msgstr "Entrée suivante &raquo;"
+
 #: ../customizer.php:19
 msgid "Sidebar Position"
 msgstr "Position colonne latérale"
@@ -38,7 +46,7 @@ msgstr "Droite"
 msgid "Display Avatar next to Post title"
 msgstr "Afficher l'avatar à coté du titre de l'article"
 
-#: ../comments.php:10 ../comments.php:108
+#: ../comments.php:10 ../comments.php:106 ../comments.php:108
 msgid "Comment"
 msgstr "Commentaire"
 
@@ -163,23 +171,29 @@ msgstr "Dessous l'entête"
 msgid "Posts by %s"
 msgstr "Publié par %s"
 
+#: ../functions.php:104
+msgctxt "author of a post"
+msgid "Published by"
+msgstr "Publié par"
+
+#: ../functions.php:108
+msgctxt "Publication date"
+msgid "on"
+msgstr "Le"
+
 # format of date for meta on post
 #: ../functions.php:108
 msgid "F j, Y"
 msgstr "j F Y"
 
-# Meta information on a posts
-# 
-# 
 # %1$s is Name
-# 
 # %2$s is Categories
-# 
 # %3$s is Date
 #: ../functions.php:123
 #, php-format
-msgid "By %1$s under %2$s on %3$s"
-msgstr "Par %1$s, le %3$s, dans %2$s "
+msgctxt "Meta informations order"
+msgid "%1$s %2$s %3$s"
+msgstr "%1$s %3$s %2$s"
 
 #: ../functions.php:124
 msgid "Edit"
@@ -189,6 +203,11 @@ msgstr "Modifier"
 #, php-format
 msgid "View all posts in %s"
 msgstr "Voir tous les articles dans %s"
+
+#: ../functions.php:170
+msgctxt "Before categories"
+msgid "Under"
+msgstr "Sous"
 
 #: ../functions.php:207
 #, php-format

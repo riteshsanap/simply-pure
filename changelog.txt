@@ -3,12 +3,13 @@
 /************************************************************************************/		
 
 /**
-  * 17/06/15 - version 1.2
-  */
+ * 23/06/15 - version 1.2
+ */
 1. Correct some things for localization
 2. Propose a .pot file
 3. Add first version of a fr_FR.po
-4. Small bugfixes
+4. Update to purecss 0.6 (grids.css is needed by a bug)
+5. Small bugfixes
 
 
 /**

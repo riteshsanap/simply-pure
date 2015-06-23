@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Wed Jun 17 2015 18:41:54 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Tue Jun 23 2015 21:56:03 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Display Avatar next to Post title"
 msgstr ""
 
-#: ../comments.php:10 ../comments.php:106 ../comments.php:108
+#: ../comments.php:10 ../comments.php:107 ../comments.php:109
 msgid "Comment"
 msgstr ""
 
@@ -104,35 +104,43 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: ../comments.php:113
+#: ../comments.php:114
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: ../comments.php:119
+#: ../comments.php:120
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
 "account\">Log out?</a>"
 msgstr ""
 
-#: ../comments.php:126
+#: ../comments.php:127
 msgid "Your email address will not be published."
 msgstr ""
 
 #: ../comments.php:140
+msgid "Name (Required)"
+msgstr ""
+
+#: ../comments.php:141
 msgid "Name"
 msgstr ""
 
 #: ../comments.php:147
+msgid "Email (Required)"
+msgstr ""
+
+#: ../comments.php:148
 msgid "Email"
 msgstr ""
 
-#: ../comments.php:154
+#: ../comments.php:154 ../comments.php:155
 msgid "Website"
 msgstr ""
 
-#: ../comments.php:159
+#: ../comments.php:160
 msgid "Comments are closed."
 msgstr ""
 

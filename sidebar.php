@@ -19,7 +19,9 @@
 			'container'=>'div',
 			'container_class'=>'nav-container',
 			'menu_class'=>'nav-list',
-			'depth'=>-1
+			'depth'=>-1,
+	                'before'          => '<div class="pure-button">',
+	                'after'           => '</div>'
 			)); ?>
 			</nav>
 		</div>

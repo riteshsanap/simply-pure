@@ -102,6 +102,7 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
   'title_reply_to'    => __( 'Leave a Reply to %s', 'purecss' ),
   'cancel_reply_link' => __( 'Cancel Reply', 'purecss' ),
   'label_submit'      => __( 'Post Comment', 'purecss' ),
+  'class_submit'      => 'pure-button pure-button-primary',
 
   'comment_field' =>  '<div class="comment-form-comment pure-control-group"><textarea id="comment" name="comment" class="pure-input-1-2" rows="8" aria-required="true" placeholder="'.__('Comment', 'purecss').'">' .
     '</textarea>'.
@@ -136,21 +137,21 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
     'author' =>
       '<div class="comment-form-author pure-control-group">' .
 	  '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-      '" class="pure-input-1-2" placeholder="Name (Required)"' . $aria_req . '/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Name (Required)', 'purecss').'"' . $aria_req . '/>'.
       '<label for="author">' . __( 'Name', 'purecss' ) . '</label>'.
       '</div>',
 
     'email' =>
       '<div class="comment-form-email pure-control-group">'.
       '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-      '" class="pure-input-1-2" placeholder="Email (Required)"' . $aria_req . '/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Email (Required)', 'purecss').'"' . $aria_req . '/>'.
       '<label for="email">' . __( 'Email', 'purecss' ). '</label>'.
       '</div>',
 
     'url' =>
       '<div class="comment-form-url pure-control-group">'.
       '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-      '" class="pure-input-1-2" placeholder="Website"/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Website', 'purecss').'"/>'.
       '<label for="url">' . __( 'Website', 'purecss' ) . '</label>' .'</div>'
     )
   ),

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Wed Jun 17 2015 18:47:56 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Tue Jun 23 2015 21:58:16 GMT+0200 (CEST)\n"
 "Last-Translator: Sebseb01 <webmaster@sebseb01.net>\n"
 "Language-Team: \n"
 "Language: French (France)\n"
@@ -46,7 +46,7 @@ msgstr "Droite"
 msgid "Display Avatar next to Post title"
 msgstr "Afficher l'avatar à coté du titre de l'article"
 
-#: ../comments.php:10 ../comments.php:106 ../comments.php:108
+#: ../comments.php:10 ../comments.php:107 ../comments.php:109
 msgid "Comment"
 msgstr "Commentaire"
 
@@ -102,12 +102,12 @@ msgstr "Annulé la réponse"
 msgid "Post Comment"
 msgstr "Écrire un commentaire\n"
 
-#: ../comments.php:113
+#: ../comments.php:114
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "You must be <a href=\"%s\">logged in</a> to post a comment."
 
-#: ../comments.php:119
+#: ../comments.php:120
 #, php-format
 msgid ""
 "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
@@ -116,23 +116,31 @@ msgstr ""
 "Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Vous "
 "déconnecter de ce compte\">Déconnexion ?</a>"
 
-#: ../comments.php:126
+#: ../comments.php:127
 msgid "Your email address will not be published."
 msgstr "Votre adresse courriel ne sera pas publié"
 
 #: ../comments.php:140
+msgid "Name (Required)"
+msgstr "Nom (Obligatoire)"
+
+#: ../comments.php:141
 msgid "Name"
 msgstr "Nom\n"
 
 #: ../comments.php:147
+msgid "Email (Required)"
+msgstr "Courriel (Obligatoire)"
+
+#: ../comments.php:148
 msgid "Email"
 msgstr "Courriel"
 
-#: ../comments.php:154
+#: ../comments.php:154 ../comments.php:155
 msgid "Website"
 msgstr "Site Web"
 
-#: ../comments.php:159
+#: ../comments.php:160
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 

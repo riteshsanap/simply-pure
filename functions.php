@@ -1,6 +1,6 @@
 <?php 
 
-        load_theme_textdomain('purecss');
+load_theme_textdomain('purecss', get_template_directory() . '/languages');
 /************************************************************************************/
 /*	Add Theme Support	*/		
 /************************************************************************************/		

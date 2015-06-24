@@ -6,8 +6,6 @@
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post-header">
 				<h1 class="post-title">
-					<?php 
-					// echo get_avatar( get_the_author_meta( 'ID' ), 48); ?>
 					<?php the_title(); ?>
 				</h1>
 				<?php pure_post_meta(); ?>

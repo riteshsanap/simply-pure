@@ -125,11 +125,6 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
   'comment_notes_before' => '<p class="comment-notes">' .
     __( 'Your email address will not be published.', 'purecss' ) . '</p>',
     'comment_notes_after' =>'',
-  // 'comment_notes_after' => '<p class="form-allowed-tags">' .
-  //   sprintf(
-  //     __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ),
-  //     ' <code>' . allowed_tags() . '</code>'
-  //   ) . '</p>',
 
   'fields' => apply_filters( 'comment_form_default_fields', array(
 
@@ -160,24 +155,4 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
 		<?php endif; ?>
 
 <?php comment_form($comments_default); ?>
-<?php 
-/** 
- * The below code is just kept incase, because the desired result was reached,
- * By the power of SASS.
- */
-// ob_start(); 
-// 	 comment_form($comments_default);
-
-//  	$search = array(
-//  		'type="submit"',
-//  		'class="comment-form"',
-//  		);
-//  	$replace = array(
-//  		'type="submit" class="pure-button pure-button-primary"',
-//  		'class="comment-form pure-form pure-form-aligned go-right pure-u-1 pure-u-md-1-2"',
-//  		);
- 	 
-//  	 echo str_replace($search,$replace,ob_get_clean());
-
-?>
  </div>

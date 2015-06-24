@@ -507,29 +507,28 @@ ul.list404 li .searchform {
 }
 
 /************************************************************************************/
-/*	Comment Form floating labels	*/
+/*	Form floating labels	*/
 /************************************************************************************/
-form#commentform > div {
+form > div {
   position: relative;
   overflow: hidden;
 }
-form#commentform input, form#commentform textarea {
+form input:not([type=submit]), form textarea {
   width: 100%;
   border: 2px solid #999999;
-  /*bckground: none;*/
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
   outline: 0;
 }
-form#commentform input:valid:not(#submit), form#commentform textarea:valid {
+formntform input:valid:not([type=submit]), form#commentform textarea:valid {
   background: white;
 }
-form#commentform input:focus, form#commentform textarea:focus {
+form input:focus, form#commentform textarea:focus {
   border-color: #999999;
 }
-form#commentform input:focus + label, form#commentform textarea:focus + label {
+form input:focus + label, form#commentform textarea:focus + label {
   background: #999999;
   color: white;
   font-size: 80%;
@@ -537,14 +536,14 @@ form#commentform input:focus + label, form#commentform textarea:focus + label {
   z-index: 2;
   text-transform: uppercase;
 }
-form#commentform label {
+form label {
   text-align: left;
   transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   position: absolute;
   color: #999;
   padding: 7px 6px;
 }
-form#commentform textarea {
+form textarea {
   display: block;
   resize: vertical;
 }
@@ -579,7 +578,7 @@ form.go-right input:focus + label, form.comment-form input:focus + label, form.g
   width: 40%;
   padding-top: 5px;
 }
-form.go-right #submit, form.comment-form #submit {
+form.go-right [type=submit], form.comment-form #submit {
   width: auto;
   border: none;
 }
@@ -803,4 +802,3 @@ pre {
   color: #fff;
   transition: color 1s;
 }
-

@@ -17,7 +17,7 @@
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 48); ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h2>
-				<!--<?php pure_post_meta(); ?>!-->
+				<?php pure_post_meta(); ?>
 			</header>
 			<div class="post-body" itemprop="articleBody">
 				<?php pure_post_thumbnail(); ?>

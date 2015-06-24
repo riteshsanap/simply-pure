@@ -93,6 +93,7 @@ function purecss_comments($comment, $args, $depth) {
  */
 $commenter = wp_get_current_commenter();
 $req = get_option( 'require_name_email' );
+$reqstr = _x('(Required)','Add after all required fields','purecss');
 $required_text = ' "<span class="required">*</span>" marked fields are required';
 $aria_req = ( $req ? " aria-required='true' required" : '' );
  	$comments_default = array(
@@ -137,14 +138,14 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
     'author' =>
       '<div class="comment-form-author pure-control-group">' .
 	  '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-      '" class="pure-input-1-2" placeholder="'.__('Name (Required)', 'purecss').'"' . $aria_req . '/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Name', 'purecss').' '.$reqstr.'"' . $aria_req . '/>'.
       '<label for="author">' . __( 'Name', 'purecss' ) . '</label>'.
       '</div>',
 
     'email' =>
       '<div class="comment-form-email pure-control-group">'.
       '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-      '" class="pure-input-1-2" placeholder="'.__('Email (Required)', 'purecss').'"' . $aria_req . '/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Email', 'purecss').' '.$reqstr.'.'"' . $aria_req . '/>'.
       '<label for="email">' . __( 'Email', 'purecss' ). '</label>'.
       '</div>',
 

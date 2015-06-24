@@ -94,7 +94,7 @@ h3 {
   color: #b0cadb;
 }
 
-.menu-list {
+#menu-base, .menu-list {
     margin: 0;
     padding: 0;
     list-style: none;

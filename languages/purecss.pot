@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Simply Pure\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Jun 16 2015 17:20:07 GMT+0200 (CEST)\n"
-"POT-Revision-Date: Wed Jun 24 2015 12:02:15 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Thu Jun 25 2015 20:12:01 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,12 +24,20 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: ../page.php:17
+msgid "Previous Page"
+msgstr ""
+
+#: ../page.php:17
+msgid "Next Page"
+msgstr ""
+
 #: ../pagination.php:2
-msgid "&laquo; Previous Entries"
+msgid "Previous Entries"
 msgstr ""
 
 #: ../pagination.php:3
-msgid "Next Entries &raquo;"
+msgid "Next Entries"
 msgstr ""
 
 #: ../customizer.php:19
@@ -125,11 +133,11 @@ msgstr ""
 msgid "Your email address will not be published."
 msgstr ""
 
-#: ../comments.php:141 ../comments.php:142
+#: ../comments.php:136 ../comments.php:137
 msgid "Name"
 msgstr ""
 
-#: ../comments.php:148
+#: ../comments.php:143
 msgid "Email"
 msgstr ""
 
@@ -163,67 +171,67 @@ msgstr ""
 msgid "Below Header"
 msgstr ""
 
-#: ../functions.php:101
+#: ../functions.php:103
 #, php-format
 msgid "Posts by %s"
 msgstr ""
 
-#: ../functions.php:104
+#: ../functions.php:106
 msgctxt "author of a post"
 msgid "Published by"
 msgstr ""
 
-#: ../functions.php:108
+#: ../functions.php:110
 msgctxt "Publication date"
 msgid "on"
 msgstr ""
 
 # format of date for meta on post
-#: ../functions.php:108
+#: ../functions.php:110
 msgid "F j, Y"
 msgstr ""
 
 # %1$s is Name
 # %2$s is Categories
 # %3$s is Date
-#: ../functions.php:123
+#: ../functions.php:125
 #, php-format
 msgctxt "Meta informations order"
 msgid "%1$s %2$s %3$s"
 msgstr ""
 
-#: ../functions.php:124
+#: ../functions.php:126
 msgid "Edit"
 msgstr ""
 
-#: ../functions.php:168
+#: ../functions.php:170
 #, php-format
 msgid "View all posts in %s"
 msgstr ""
 
-#: ../functions.php:170
+#: ../functions.php:172
 msgctxt "Before categories"
 msgid "Under"
 msgstr ""
 
-#: ../functions.php:207
+#: ../functions.php:209
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: ../functions.php:277
+#: ../functions.php:279
 msgid "Archive: "
 msgstr ""
 
-#: ../functions.php:280
+#: ../functions.php:282
 msgid "Category: "
 msgstr ""
 
-#: ../functions.php:283
+#: ../functions.php:285
 msgid "Tag: "
 msgstr ""
 
-#: ../functions.php:286
+#: ../functions.php:288
 msgid "Author: "
 msgstr ""
 

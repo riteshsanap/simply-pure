@@ -9,9 +9,8 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, two-columns, responsive-layout, custom-menu, featured-images
 Text Domain: purecss
+Domain Path: /languages
 */
-@import url(pure-0.6-min.css);
-@import url(grids-responsive-min.css);
 
 
 /************************************************************************************/

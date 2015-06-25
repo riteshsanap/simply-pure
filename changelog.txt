@@ -1,14 +1,8 @@
 /************************************************************************************/
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/		
-/*
- *	24/06/2015 - version 1.1.1	
- */
-1. Fixed author avatar beside Post title
-2. Removed commented Code
-
 /**
- * 23/06/15 - version 1.2
+ * 25/06/15 - version 1.2 by Sebseb01
  */
 1. Correct some things for localization
 2. Propose a .pot file
@@ -16,6 +10,12 @@
 4. Update to purecss 0.6 (grids.css is needed by a bug)
 5. Small bugfixes
 
+
+/*
+ *	24/06/2015 - version 1.1.1	
+ */
+1. Fixed author avatar beside Post title
+2. Removed commented Code
 
 /**
  * 28/01/15 - version 1.1

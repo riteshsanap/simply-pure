@@ -1,6 +1,11 @@
 /************************************************************************************/
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/		
+/*
+ *	24/06/2015 - version 1.1.1	
+ */
+1. Fixed author avatar beside Post title
+2. Removed commented Code
 
 /**
  * 23/06/15 - version 1.2

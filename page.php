@@ -1,6 +1,4 @@
-<?php get_header();
-load_theme_textdomain('purecss');
-?>
+<?php get_header(); ?>
 	<div id="primary">
 		<?php if (have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
@@ -8,8 +6,6 @@ load_theme_textdomain('purecss');
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post-header">
 				<h1 class="post-title">
-					<?php 
-					// echo get_avatar( get_the_author_meta( 'ID' ), 48); ?>
 					<?php the_title(); ?>
 				</h1>
 				<?php pure_post_meta(); ?>

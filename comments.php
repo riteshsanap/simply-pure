@@ -140,7 +140,7 @@ $aria_req = ( $req ? " aria-required='true' required" : '' );
     'email' =>
       '<div class="comment-form-email pure-control-group">'.
       '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-      '" class="pure-input-1-2" placeholder="'.__('Email', 'purecss').' '.$reqstr.'.'"' . $aria_req . '/>'.
+      '" class="pure-input-1-2" placeholder="'.__('Email', 'purecss').' '.$reqstr.'"' . $aria_req . '/>'.
       '<label for="email">' . __( 'Email', 'purecss' ). '</label>'.
       '</div>',
 

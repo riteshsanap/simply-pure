@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 <div id="master-head" class="pure-g">
-<div id="content" class="wrapper content pure-u-1 pure-u-lg-19-24">
+<div id="content" class="wrapper content pure-u-1 pure-u-lg-18-24">
 <?php $purehead = get_theme_mod('header_position', 'content-top-home');  ?>
 <?php if( ( $purehead == 'content-top-home' && is_home() ) || ( $purehead !='sidebar-top' && $purehead =='content-top' || $purehead == 'both' ) ) : ?>
 <div class="header">

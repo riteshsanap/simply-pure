@@ -1,4 +1,4 @@
-	<div class="wrapper sidebar pure-u-1 pure-u-lg-6-24">
+	<div class="wrapper sidebar pure-u-1 pure-u-md-1-4 pure-u-lg-6-24">
 		<div class="header" id="pure-main-header">
 		<?php if(get_theme_mod('header_position') != 'content-top') : ?>
 			<header class='site-header' role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">

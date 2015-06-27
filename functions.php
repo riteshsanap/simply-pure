@@ -11,6 +11,7 @@ load_theme_textdomain('purecss', get_template_directory() . '/languages');
 function simply_pure_theme_install() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
 	add_theme_support( "custom-header", array('flex-height'=>true,'flex-width'=>true,));
 	add_theme_support( "custom-background", array('default-color'=>'ffffff') );
 	add_editor_style( 'editor-style.css' );
@@ -107,7 +108,7 @@ function pure_author_link() {
 	return $link;
 }
 function pure_post_time() {
-	$time = _x('on','Publication date','purecss').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y')) . '</time>';
+	$time = _x('on','Publication date','purecss').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y', 'purecss')) . '</time>';
 	return $time;
 }
 

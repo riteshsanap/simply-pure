@@ -2,12 +2,12 @@
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/		
 /**
- * 25/06/15 - version 1.2 by Sebseb01
+ * To be Announced - version 1.1.2
  */
-1. Correct some things for localization
-2. Propose a .pot file
-3. Add first version of a fr_FR.po
-4. Update to purecss 0.6 (grids.css is needed by a bug)
+1. Correct some things for localization (by Sebseb01)
+2. Propose a .pot file (by Sebseb01)
+3. Add first version of a fr_FR.po (by Sebseb01)
+4. Update to purecss 0.6 (grids.css is needed by a bug) (by Sebseb01)
 5. Small bugfixes
 
 

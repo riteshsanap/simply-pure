@@ -78,9 +78,7 @@ function purecss_scripts_styles() {
 	/**
 	 * Enqueue StyleSheet
 	 */
-	wp_enqueue_style( 'purecss-0.6', get_template_directory_uri().'/pure-0.6-min.css', array(),'0.1');
-    wp_enqueue_style( 'purecss-grid', get_template_directory_uri().'/grids-responsive-min.css', array('purecss-0.6'), '0.2');
-	wp_enqueue_style( 'purecss-style', get_stylesheet_uri(), array('purecss-grid'), '0.3');
+	wp_enqueue_style( 'purecss-style', get_stylesheet_uri(), array(), '0.3');
 
 	/**
 	 * Add JavaScript to animate Sidebar, when the sidebar is active i.e. atleast has 1 widget

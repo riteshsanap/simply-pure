@@ -399,13 +399,32 @@ div.comment-list {
 }
 .searchform {
 	input.searchbox {
-		margin-bottom:10px;
+		// margin-bottom:10px;
 		display:inline-block;
 	}
 	.searchbutton {
 		@extend .pure-button;
 		@extend .pure-button-primary;
 	}
+}
+.widget {
+	// padding-bottom: 20px;
+	margin-bottom: 20px;
+	// border-bottom: 10px solid $red;
+}
+.screen-reader-text {
+	display: none;
+}
+.widget_calendar {
+	
+	// margin-bottom: 10px;
+
+	&::after, &::before{
+		clear: both;
+		content: " ";
+		display: table;
+	}
+
 }
 #calendar_wrap {
 	float:left;
@@ -415,7 +434,13 @@ div.comment-list {
 		float:right;
 	}
 }
+#post-footer {
+	#calendar_wrap {
+		float: none;
+	}
+}
 #wp-calendar {
+	width: 100%;
 	@extend .pure-table;
 	@extend .pure-table-horizontal;
 	@extend .pure-table-bordered;

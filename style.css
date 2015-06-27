@@ -1925,8 +1925,21 @@ div.comment-list .comment-meta {
 }
 
 .searchform input.searchbox {
-  margin-bottom: 10px;
   display: inline-block;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.widget_calendar::after, .widget_calendar::before {
+  clear: both;
+  content: " ";
+  display: table;
 }
 
 #calendar_wrap {
@@ -1937,6 +1950,13 @@ div.comment-list .comment-meta {
   float: right;
 }
 
+#post-footer #calendar_wrap {
+  float: none;
+}
+
+#wp-calendar {
+  width: 100%;
+}
 #wp-calendar th, #wp-calendar td {
   padding: .3rem;
 }

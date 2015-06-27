@@ -15,13 +15,11 @@
 		<?php endif; ?>
 		<nav role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 			<?php wp_nav_menu(array(
-			'theme_location'=>'primary',
-			'container'=>'div',
-			'container_class'=>'nav-container',
-			'menu_class'=>'nav-list',
-			'depth'=>-1,
-	                'before'          => '<div class="pure-button">',
-	                'after'           => '</div>'
+				'theme_location'=>'primary',
+				'container'=>'div',
+				'container_class'=>'nav-container',
+				'menu_class'=>'nav-list',
+				'depth'=>-1,
 			)); ?>
 			</nav>
 		</div>

@@ -434,11 +434,20 @@ div.comment-list {
 		float:right;
 	}
 }
-#post-footer {
+#post-footer, .footer-columns {
 	#calendar_wrap {
 		float: none;
 	}
 }
+#calendar_wrap a {
+	@extend .post-category;
+	background: $green;
+}
+#calendar_wrap tfoot a {
+	@extend .pure-button;
+	// @extend .pure-button-primary;
+}
+
 #wp-calendar {
 	width: 100%;
 	@extend .pure-table;
@@ -601,13 +610,15 @@ form#commentform {
 }
 .post-password-form {
 	@extend .pure-form;
-	
+
 	input[type=submit] {
 		@extend .pure-button;
 		@extend .pure-button-primary;
 	}
 }
-
+.widget_categories .postform {
+	@extend .pure-u-1;
+}
 form.go-bottom {
   input, textarea {
     padding: 12px 12px 12px 12px; 

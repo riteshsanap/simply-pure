@@ -1,7 +1,14 @@
 <?php 
 /************************************************************************************/
 /* Display Comments and Comments form	*/		
-/************************************************************************************/		
+/************************************************************************************/	
+/**
+ * If the current post is protected by Password and the user has not yet entered the password
+ * return early
+ */
+if ( post_password_required() ) {
+	return;
+}	
  ?>
 
  <div id="comments">

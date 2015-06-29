@@ -599,6 +599,14 @@ form#commentform {
     resize: vertical;
   }
 }
+.post-password-form {
+	@extend .pure-form;
+	
+	input[type=submit] {
+		@extend .pure-button;
+		@extend .pure-button-primary;
+	}
+}
 
 form.go-bottom {
   input, textarea {

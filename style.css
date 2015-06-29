@@ -396,7 +396,7 @@ td, th {
   width: 100%;
 }
 
-.pure-button, .comment-reply-link, .nav-list li a, .searchform .searchbutton, form.go-right #submit, form.comment-form #submit {
+.pure-button, .comment-reply-link, .nav-list li a, .searchform .searchbutton, .post-password-form input[type=submit], form.go-right #submit, form.comment-form #submit {
   display: inline-block;
   zoom: 1;
   line-height: normal;
@@ -414,12 +414,12 @@ td, th {
   box-sizing: border-box;
 }
 
-.pure-button::-moz-focus-inner, .comment-reply-link::-moz-focus-inner, .nav-list li a::-moz-focus-inner, .searchform .searchbutton::-moz-focus-inner, form.go-right #submit::-moz-focus-inner, form.comment-form #submit::-moz-focus-inner {
+.pure-button::-moz-focus-inner, .comment-reply-link::-moz-focus-inner, .nav-list li a::-moz-focus-inner, .searchform .searchbutton::-moz-focus-inner, .post-password-form input[type=submit]::-moz-focus-inner, form.go-right #submit::-moz-focus-inner, form.comment-form #submit::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.pure-button, .comment-reply-link, .nav-list li a, .searchform .searchbutton, form.go-right #submit, form.comment-form #submit {
+.pure-button, .comment-reply-link, .nav-list li a, .searchform .searchbutton, .post-password-form input[type=submit], form.go-right #submit, form.comment-form #submit {
   font-family: inherit;
   font-size: 100%;
   padding: .5em 1em;
@@ -432,7 +432,7 @@ td, th {
   border-radius: 2px;
 }
 
-.pure-button-hover, .pure-button:hover, .comment-reply-link:hover, .nav-list li a:hover, .searchform .searchbutton:hover, form.go-right #submit:hover, form.comment-form #submit:hover, .pure-button:focus, .comment-reply-link:focus, .nav-list li a:focus, .searchform .searchbutton:focus, form.go-right #submit:focus, form.comment-form #submit:focus {
+.pure-button-hover, .pure-button:hover, .comment-reply-link:hover, .nav-list li a:hover, .searchform .searchbutton:hover, .post-password-form input[type=submit]:hover, form.go-right #submit:hover, form.comment-form #submit:hover, .pure-button:focus, .comment-reply-link:focus, .nav-list li a:focus, .searchform .searchbutton:focus, .post-password-form input[type=submit]:focus, form.go-right #submit:focus, form.comment-form #submit:focus {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
@@ -441,16 +441,16 @@ td, th {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
 
-.pure-button:focus, .comment-reply-link:focus, .nav-list li a:focus, .searchform .searchbutton:focus, form.go-right #submit:focus, form.comment-form #submit:focus {
+.pure-button:focus, .comment-reply-link:focus, .nav-list li a:focus, .searchform .searchbutton:focus, .post-password-form input[type=submit]:focus, form.go-right #submit:focus, form.comment-form #submit:focus {
   outline: 0;
 }
 
-.pure-button-active, .pure-button:active, .comment-reply-link:active, .nav-list li a:active, .searchform .searchbutton:active, form.go-right #submit:active, form.comment-form #submit:active {
+.pure-button-active, .pure-button:active, .comment-reply-link:active, .nav-list li a:active, .searchform .searchbutton:active, .post-password-form input[type=submit]:active, form.go-right #submit:active, form.comment-form #submit:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
   border-color: #000\9;
 }
 
-.pure-button[disabled], [disabled].comment-reply-link, .nav-list li a[disabled], .searchform [disabled].searchbutton, form.go-right [disabled]#submit, form.comment-form [disabled]#submit, .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active {
+.pure-button[disabled], [disabled].comment-reply-link, .nav-list li a[disabled], .searchform [disabled].searchbutton, .post-password-form input[disabled][type=submit], form.go-right [disabled]#submit, form.comment-form [disabled]#submit, .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active {
   border: 0;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -466,17 +466,17 @@ td, th {
   display: none;
 }
 
-.pure-button::-moz-focus-inner, .comment-reply-link::-moz-focus-inner, .nav-list li a::-moz-focus-inner, .searchform .searchbutton::-moz-focus-inner, form.go-right #submit::-moz-focus-inner, form.comment-form #submit::-moz-focus-inner {
+.pure-button::-moz-focus-inner, .comment-reply-link::-moz-focus-inner, .nav-list li a::-moz-focus-inner, .searchform .searchbutton::-moz-focus-inner, .post-password-form input[type=submit]::-moz-focus-inner, form.go-right #submit::-moz-focus-inner, form.comment-form #submit::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.pure-button-primary, .comment-reply-link, .searchform .searchbutton, form.go-right #submit, form.comment-form #submit, form.go-right #submit:valid, form.comment-form #submit:valid, .pure-button-selected, a.pure-button-primary, a.comment-reply-link, .searchform a.searchbutton, form.go-right a#submit, form.comment-form a#submit, form.go-right a#submit:valid, form.comment-form a#submit:valid, a.pure-button-selected {
+.pure-button-primary, .comment-reply-link, .searchform .searchbutton, .post-password-form input[type=submit], form.go-right #submit, form.comment-form #submit, form.go-right #submit:valid, form.comment-form #submit:valid, .pure-button-selected, a.pure-button-primary, a.comment-reply-link, .searchform a.searchbutton, form.go-right a#submit, form.comment-form a#submit, form.go-right a#submit:valid, form.comment-form a#submit:valid, a.pure-button-selected {
   background-color: #0078e7;
   color: #fff;
 }
 
-.pure-form input[type=text], .comment-form input[type=text], .pure-form input[type=password], .comment-form input[type=password], .pure-form input[type=email], .comment-form input[type=email], .pure-form input[type=url], .comment-form input[type=url], .pure-form input[type=date], .comment-form input[type=date], .pure-form input[type=month], .comment-form input[type=month], .pure-form input[type=time], .comment-form input[type=time], .pure-form input[type=datetime], .comment-form input[type=datetime], .pure-form input[type=datetime-local], .comment-form input[type=datetime-local], .pure-form input[type=week], .comment-form input[type=week], .pure-form input[type=number], .comment-form input[type=number], .pure-form input[type=search], .comment-form input[type=search], .pure-form input[type=tel], .comment-form input[type=tel], .pure-form input[type=color], .comment-form input[type=color], .pure-form select, .comment-form select, .pure-form textarea, .comment-form textarea {
+.pure-form input[type=text], .post-password-form input[type=text], .comment-form input[type=text], .pure-form input[type=password], .post-password-form input[type=password], .comment-form input[type=password], .pure-form input[type=email], .post-password-form input[type=email], .comment-form input[type=email], .pure-form input[type=url], .post-password-form input[type=url], .comment-form input[type=url], .pure-form input[type=date], .post-password-form input[type=date], .comment-form input[type=date], .pure-form input[type=month], .post-password-form input[type=month], .comment-form input[type=month], .pure-form input[type=time], .post-password-form input[type=time], .comment-form input[type=time], .pure-form input[type=datetime], .post-password-form input[type=datetime], .comment-form input[type=datetime], .pure-form input[type=datetime-local], .post-password-form input[type=datetime-local], .comment-form input[type=datetime-local], .pure-form input[type=week], .post-password-form input[type=week], .comment-form input[type=week], .pure-form input[type=number], .post-password-form input[type=number], .comment-form input[type=number], .pure-form input[type=search], .post-password-form input[type=search], .comment-form input[type=search], .pure-form input[type=tel], .post-password-form input[type=tel], .comment-form input[type=tel], .pure-form input[type=color], .post-password-form input[type=color], .comment-form input[type=color], .pure-form select, .post-password-form select, .comment-form select, .pure-form textarea, .post-password-form textarea, .comment-form textarea {
   padding: .5em .6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -488,7 +488,7 @@ td, th {
   box-sizing: border-box;
 }
 
-.pure-form input:not([type]), .comment-form input:not([type]) {
+.pure-form input:not([type]), .post-password-form input:not([type]), .comment-form input:not([type]) {
   padding: .5em .6em;
   display: inline-block;
   border: 1px solid #ccc;
@@ -499,78 +499,78 @@ td, th {
   box-sizing: border-box;
 }
 
-.pure-form input[type=color], .comment-form input[type=color] {
+.pure-form input[type=color], .post-password-form input[type=color], .comment-form input[type=color] {
   padding: .2em .5em;
 }
 
-.pure-form input[type=text]:focus, .comment-form input[type=text]:focus, .pure-form input[type=password]:focus, .comment-form input[type=password]:focus, .pure-form input[type=email]:focus, .comment-form input[type=email]:focus, .pure-form input[type=url]:focus, .comment-form input[type=url]:focus, .pure-form input[type=date]:focus, .comment-form input[type=date]:focus, .pure-form input[type=month]:focus, .comment-form input[type=month]:focus, .pure-form input[type=time]:focus, .comment-form input[type=time]:focus, .pure-form input[type=datetime]:focus, .comment-form input[type=datetime]:focus, .pure-form input[type=datetime-local]:focus, .comment-form input[type=datetime-local]:focus, .pure-form input[type=week]:focus, .comment-form input[type=week]:focus, .pure-form input[type=number]:focus, .comment-form input[type=number]:focus, .pure-form input[type=search]:focus, .comment-form input[type=search]:focus, .pure-form input[type=tel]:focus, .comment-form input[type=tel]:focus, .pure-form input[type=color]:focus, .comment-form input[type=color]:focus, .pure-form select:focus, .comment-form select:focus, .pure-form textarea:focus, .comment-form textarea:focus {
+.pure-form input[type=text]:focus, .post-password-form input[type=text]:focus, .comment-form input[type=text]:focus, .pure-form input[type=password]:focus, .post-password-form input[type=password]:focus, .comment-form input[type=password]:focus, .pure-form input[type=email]:focus, .post-password-form input[type=email]:focus, .comment-form input[type=email]:focus, .pure-form input[type=url]:focus, .post-password-form input[type=url]:focus, .comment-form input[type=url]:focus, .pure-form input[type=date]:focus, .post-password-form input[type=date]:focus, .comment-form input[type=date]:focus, .pure-form input[type=month]:focus, .post-password-form input[type=month]:focus, .comment-form input[type=month]:focus, .pure-form input[type=time]:focus, .post-password-form input[type=time]:focus, .comment-form input[type=time]:focus, .pure-form input[type=datetime]:focus, .post-password-form input[type=datetime]:focus, .comment-form input[type=datetime]:focus, .pure-form input[type=datetime-local]:focus, .post-password-form input[type=datetime-local]:focus, .comment-form input[type=datetime-local]:focus, .pure-form input[type=week]:focus, .post-password-form input[type=week]:focus, .comment-form input[type=week]:focus, .pure-form input[type=number]:focus, .post-password-form input[type=number]:focus, .comment-form input[type=number]:focus, .pure-form input[type=search]:focus, .post-password-form input[type=search]:focus, .comment-form input[type=search]:focus, .pure-form input[type=tel]:focus, .post-password-form input[type=tel]:focus, .comment-form input[type=tel]:focus, .pure-form input[type=color]:focus, .post-password-form input[type=color]:focus, .comment-form input[type=color]:focus, .pure-form select:focus, .post-password-form select:focus, .comment-form select:focus, .pure-form textarea:focus, .post-password-form textarea:focus, .comment-form textarea:focus {
   outline: 0;
   border-color: #129FEA;
 }
 
-.pure-form input:not([type]):focus, .comment-form input:not([type]):focus {
+.pure-form input:not([type]):focus, .post-password-form input:not([type]):focus, .comment-form input:not([type]):focus {
   outline: 0;
   border-color: #129FEA;
 }
 
-.pure-form input[type=file]:focus, .comment-form input[type=file]:focus, .pure-form input[type=radio]:focus, .comment-form input[type=radio]:focus, .pure-form input[type=checkbox]:focus, .comment-form input[type=checkbox]:focus {
+.pure-form input[type=file]:focus, .post-password-form input[type=file]:focus, .comment-form input[type=file]:focus, .pure-form input[type=radio]:focus, .post-password-form input[type=radio]:focus, .comment-form input[type=radio]:focus, .pure-form input[type=checkbox]:focus, .post-password-form input[type=checkbox]:focus, .comment-form input[type=checkbox]:focus {
   outline: thin solid #129FEA;
   outline: 1px auto #129FEA;
 }
 
-.pure-form .pure-checkbox, .comment-form .pure-checkbox, .pure-form .pure-radio, .comment-form .pure-radio {
+.pure-form .pure-checkbox, .post-password-form .pure-checkbox, .comment-form .pure-checkbox, .pure-form .pure-radio, .post-password-form .pure-radio, .comment-form .pure-radio {
   margin: .5em 0;
   display: block;
 }
 
-.pure-form input[type=text][disabled], .comment-form input[type=text][disabled], .pure-form input[type=password][disabled], .comment-form input[type=password][disabled], .pure-form input[type=email][disabled], .comment-form input[type=email][disabled], .pure-form input[type=url][disabled], .comment-form input[type=url][disabled], .pure-form input[type=date][disabled], .comment-form input[type=date][disabled], .pure-form input[type=month][disabled], .comment-form input[type=month][disabled], .pure-form input[type=time][disabled], .comment-form input[type=time][disabled], .pure-form input[type=datetime][disabled], .comment-form input[type=datetime][disabled], .pure-form input[type=datetime-local][disabled], .comment-form input[type=datetime-local][disabled], .pure-form input[type=week][disabled], .comment-form input[type=week][disabled], .pure-form input[type=number][disabled], .comment-form input[type=number][disabled], .pure-form input[type=search][disabled], .comment-form input[type=search][disabled], .pure-form input[type=tel][disabled], .comment-form input[type=tel][disabled], .pure-form input[type=color][disabled], .comment-form input[type=color][disabled], .pure-form select[disabled], .comment-form select[disabled], .pure-form textarea[disabled], .comment-form textarea[disabled] {
+.pure-form input[type=text][disabled], .post-password-form input[type=text][disabled], .comment-form input[type=text][disabled], .pure-form input[type=password][disabled], .post-password-form input[type=password][disabled], .comment-form input[type=password][disabled], .pure-form input[type=email][disabled], .post-password-form input[type=email][disabled], .comment-form input[type=email][disabled], .pure-form input[type=url][disabled], .post-password-form input[type=url][disabled], .comment-form input[type=url][disabled], .pure-form input[type=date][disabled], .post-password-form input[type=date][disabled], .comment-form input[type=date][disabled], .pure-form input[type=month][disabled], .post-password-form input[type=month][disabled], .comment-form input[type=month][disabled], .pure-form input[type=time][disabled], .post-password-form input[type=time][disabled], .comment-form input[type=time][disabled], .pure-form input[type=datetime][disabled], .post-password-form input[type=datetime][disabled], .comment-form input[type=datetime][disabled], .pure-form input[type=datetime-local][disabled], .post-password-form input[type=datetime-local][disabled], .comment-form input[type=datetime-local][disabled], .pure-form input[type=week][disabled], .post-password-form input[type=week][disabled], .comment-form input[type=week][disabled], .pure-form input[type=number][disabled], .post-password-form input[type=number][disabled], .comment-form input[type=number][disabled], .pure-form input[type=search][disabled], .post-password-form input[type=search][disabled], .comment-form input[type=search][disabled], .pure-form input[type=tel][disabled], .post-password-form input[type=tel][disabled], .comment-form input[type=tel][disabled], .pure-form input[type=color][disabled], .post-password-form input[type=color][disabled], .comment-form input[type=color][disabled], .pure-form select[disabled], .post-password-form select[disabled], .comment-form select[disabled], .pure-form textarea[disabled], .post-password-form textarea[disabled], .comment-form textarea[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-.pure-form input:not([type])[disabled], .comment-form input:not([type])[disabled] {
+.pure-form input:not([type])[disabled], .post-password-form input:not([type])[disabled], .comment-form input:not([type])[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-.pure-form input[readonly], .comment-form input[readonly], .pure-form select[readonly], .comment-form select[readonly], .pure-form textarea[readonly], .comment-form textarea[readonly] {
+.pure-form input[readonly], .post-password-form input[readonly], .comment-form input[readonly], .pure-form select[readonly], .post-password-form select[readonly], .comment-form select[readonly], .pure-form textarea[readonly], .post-password-form textarea[readonly], .comment-form textarea[readonly] {
   background-color: #eee;
   color: #777;
   border-color: #ccc;
 }
 
-.pure-form input:focus:invalid, .comment-form input:focus:invalid, .pure-form textarea:focus:invalid, .comment-form textarea:focus:invalid, .pure-form select:focus:invalid, .comment-form select:focus:invalid {
+.pure-form input:focus:invalid, .post-password-form input:focus:invalid, .comment-form input:focus:invalid, .pure-form textarea:focus:invalid, .post-password-form textarea:focus:invalid, .comment-form textarea:focus:invalid, .pure-form select:focus:invalid, .post-password-form select:focus:invalid, .comment-form select:focus:invalid {
   color: #b94a48;
   border-color: #e9322d;
 }
 
-.pure-form input[type=file]:focus:invalid:focus, .comment-form input[type=file]:focus:invalid:focus, .pure-form input[type=radio]:focus:invalid:focus, .comment-form input[type=radio]:focus:invalid:focus, .pure-form input[type=checkbox]:focus:invalid:focus, .comment-form input[type=checkbox]:focus:invalid:focus {
+.pure-form input[type=file]:focus:invalid:focus, .post-password-form input[type=file]:focus:invalid:focus, .comment-form input[type=file]:focus:invalid:focus, .pure-form input[type=radio]:focus:invalid:focus, .post-password-form input[type=radio]:focus:invalid:focus, .comment-form input[type=radio]:focus:invalid:focus, .pure-form input[type=checkbox]:focus:invalid:focus, .post-password-form input[type=checkbox]:focus:invalid:focus, .comment-form input[type=checkbox]:focus:invalid:focus {
   outline-color: #e9322d;
 }
 
-.pure-form select, .comment-form select {
+.pure-form select, .post-password-form select, .comment-form select {
   height: 2.25em;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
-.pure-form select[multiple], .comment-form select[multiple] {
+.pure-form select[multiple], .post-password-form select[multiple], .comment-form select[multiple] {
   height: auto;
 }
 
-.pure-form label, .comment-form label {
+.pure-form label, .post-password-form label, .comment-form label {
   margin: .5em 0 .2em;
 }
 
-.pure-form fieldset, .comment-form fieldset {
+.pure-form fieldset, .post-password-form fieldset, .comment-form fieldset {
   margin: 0;
   padding: .35em 0 .75em;
   border: 0;
 }
 
-.pure-form legend, .comment-form legend {
+.pure-form legend, .post-password-form legend, .comment-form legend {
   display: block;
   width: 100%;
   padding: .3em 0;
@@ -616,16 +616,16 @@ td, th {
   margin: 1.5em 0 0 11em;
 }
 
-.pure-form input.pure-input-rounded, .comment-form input.pure-input-rounded, .pure-form .pure-input-rounded, .comment-form .pure-input-rounded {
+.pure-form input.pure-input-rounded, .post-password-form input.pure-input-rounded, .comment-form input.pure-input-rounded, .pure-form .pure-input-rounded, .post-password-form .pure-input-rounded, .comment-form .pure-input-rounded {
   border-radius: 2em;
   padding: .5em 1em;
 }
 
-.pure-form .pure-group fieldset, .comment-form .pure-group fieldset {
+.pure-form .pure-group fieldset, .post-password-form .pure-group fieldset, .comment-form .pure-group fieldset {
   margin-bottom: 10px;
 }
 
-.pure-form .pure-group input, .comment-form .pure-group input, .pure-form .pure-group textarea, .comment-form .pure-group textarea {
+.pure-form .pure-group input, .post-password-form .pure-group input, .comment-form .pure-group input, .pure-form .pure-group textarea, .post-password-form .pure-group textarea, .comment-form .pure-group textarea {
   display: block;
   padding: 10px;
   margin: 0 0 -1px;
@@ -634,53 +634,53 @@ td, th {
   top: -1px;
 }
 
-.pure-form .pure-group input:focus, .comment-form .pure-group input:focus, .pure-form .pure-group textarea:focus, .comment-form .pure-group textarea:focus {
+.pure-form .pure-group input:focus, .post-password-form .pure-group input:focus, .comment-form .pure-group input:focus, .pure-form .pure-group textarea:focus, .post-password-form .pure-group textarea:focus, .comment-form .pure-group textarea:focus {
   z-index: 3;
 }
 
-.pure-form .pure-group input:first-child, .comment-form .pure-group input:first-child, .pure-form .pure-group textarea:first-child, .comment-form .pure-group textarea:first-child {
+.pure-form .pure-group input:first-child, .post-password-form .pure-group input:first-child, .comment-form .pure-group input:first-child, .pure-form .pure-group textarea:first-child, .post-password-form .pure-group textarea:first-child, .comment-form .pure-group textarea:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
   margin: 0;
 }
 
-.pure-form .pure-group input:first-child:last-child, .comment-form .pure-group input:first-child:last-child, .pure-form .pure-group textarea:first-child:last-child, .comment-form .pure-group textarea:first-child:last-child {
+.pure-form .pure-group input:first-child:last-child, .post-password-form .pure-group input:first-child:last-child, .comment-form .pure-group input:first-child:last-child, .pure-form .pure-group textarea:first-child:last-child, .post-password-form .pure-group textarea:first-child:last-child, .comment-form .pure-group textarea:first-child:last-child {
   top: 1px;
   border-radius: 4px;
   margin: 0;
 }
 
-.pure-form .pure-group input:last-child, .comment-form .pure-group input:last-child, .pure-form .pure-group textarea:last-child, .comment-form .pure-group textarea:last-child {
+.pure-form .pure-group input:last-child, .post-password-form .pure-group input:last-child, .comment-form .pure-group input:last-child, .pure-form .pure-group textarea:last-child, .post-password-form .pure-group textarea:last-child, .comment-form .pure-group textarea:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
   margin: 0;
 }
 
-.pure-form .pure-group button, .comment-form .pure-group button {
+.pure-form .pure-group button, .post-password-form .pure-group button, .comment-form .pure-group button {
   margin: .35em 0;
 }
 
-.pure-form .pure-input-1, .comment-form .pure-input-1 {
+.pure-form .pure-input-1, .post-password-form .pure-input-1, .comment-form .pure-input-1 {
   width: 100%;
 }
 
-.pure-form .pure-input-2-3, .comment-form .pure-input-2-3 {
+.pure-form .pure-input-2-3, .post-password-form .pure-input-2-3, .comment-form .pure-input-2-3 {
   width: 66%;
 }
 
-.pure-form .pure-input-1-2, .comment-form .pure-input-1-2 {
+.pure-form .pure-input-1-2, .post-password-form .pure-input-1-2, .comment-form .pure-input-1-2 {
   width: 50%;
 }
 
-.pure-form .pure-input-1-3, .comment-form .pure-input-1-3 {
+.pure-form .pure-input-1-3, .post-password-form .pure-input-1-3, .comment-form .pure-input-1-3 {
   width: 33%;
 }
 
-.pure-form .pure-input-1-4, .comment-form .pure-input-1-4 {
+.pure-form .pure-input-1-4, .post-password-form .pure-input-1-4, .comment-form .pure-input-1-4 {
   width: 25%;
 }
 
-.pure-form .pure-help-inline, .comment-form .pure-help-inline, .pure-form-message-inline {
+.pure-form .pure-help-inline, .post-password-form .pure-help-inline, .comment-form .pure-help-inline, .pure-form-message-inline {
   display: inline-block;
   padding-left: .3em;
   color: #666;
@@ -695,11 +695,11 @@ td, th {
 }
 
 @media only screen and (max-width: 480px) {
-  .pure-form button[type=submit], .comment-form button[type=submit] {
+  .pure-form button[type=submit], .post-password-form button[type=submit], .comment-form button[type=submit] {
     margin: .7em 0 0;
   }
 
-  .pure-form input:not([type]), .comment-form input:not([type]), .pure-form input[type=text], .comment-form input[type=text], .pure-form input[type=password], .comment-form input[type=password], .pure-form input[type=email], .comment-form input[type=email], .pure-form input[type=url], .comment-form input[type=url], .pure-form input[type=date], .comment-form input[type=date], .pure-form input[type=month], .comment-form input[type=month], .pure-form input[type=time], .comment-form input[type=time], .pure-form input[type=datetime], .comment-form input[type=datetime], .pure-form input[type=datetime-local], .comment-form input[type=datetime-local], .pure-form input[type=week], .comment-form input[type=week], .pure-form input[type=number], .comment-form input[type=number], .pure-form input[type=search], .comment-form input[type=search], .pure-form input[type=tel], .comment-form input[type=tel], .pure-form input[type=color], .comment-form input[type=color], .pure-form label, .comment-form label {
+  .pure-form input:not([type]), .post-password-form input:not([type]), .comment-form input:not([type]), .pure-form input[type=text], .post-password-form input[type=text], .comment-form input[type=text], .pure-form input[type=password], .post-password-form input[type=password], .comment-form input[type=password], .pure-form input[type=email], .post-password-form input[type=email], .comment-form input[type=email], .pure-form input[type=url], .post-password-form input[type=url], .comment-form input[type=url], .pure-form input[type=date], .post-password-form input[type=date], .comment-form input[type=date], .pure-form input[type=month], .post-password-form input[type=month], .comment-form input[type=month], .pure-form input[type=time], .post-password-form input[type=time], .comment-form input[type=time], .pure-form input[type=datetime], .post-password-form input[type=datetime], .comment-form input[type=datetime], .pure-form input[type=datetime-local], .post-password-form input[type=datetime-local], .comment-form input[type=datetime-local], .pure-form input[type=week], .post-password-form input[type=week], .comment-form input[type=week], .pure-form input[type=number], .post-password-form input[type=number], .comment-form input[type=number], .pure-form input[type=search], .post-password-form input[type=search], .comment-form input[type=search], .pure-form input[type=tel], .post-password-form input[type=tel], .comment-form input[type=tel], .pure-form input[type=color], .post-password-form input[type=color], .comment-form input[type=color], .pure-form label, .post-password-form label, .comment-form label {
     margin-bottom: .3em;
     display: block;
   }
@@ -719,7 +719,7 @@ td, th {
     margin: 1.5em 0 0;
   }
 
-  .pure-form .pure-help-inline, .comment-form .pure-help-inline, .pure-form-message-inline, .pure-form-message {
+  .pure-form .pure-help-inline, .post-password-form .pure-help-inline, .comment-form .pure-help-inline, .pure-form-message-inline, .pure-form-message {
     display: block;
     font-size: .75em;
     padding: .2em 0 .8em;

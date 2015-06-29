@@ -2326,7 +2326,7 @@ pre {
 }
 }
 @media (max-width: 900px) {
-  #wp-calendar {
+  aside#widget-sidebar #wp-calendar {
     margin: 0 -1.9em;
   }
 }

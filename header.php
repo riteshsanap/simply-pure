@@ -15,7 +15,7 @@
 <div class="header">
 	<?php if(!is_home()) : ?>
 	    <h1>
-	    <a href="<?php echo home_url(); ?>"><?php bloginfo('title'); ?></a>
+	    <a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a>
 	    </h1>
 	    <?php else : ?>
 	    <h1><?php bloginfo('title'); ?></h1>	

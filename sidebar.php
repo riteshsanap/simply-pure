@@ -4,7 +4,7 @@
 			<header class='site-header' role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 				<hgroup>
 						<?php if(!is_home()) : ?>
-							<h1 class="site_title" itemprop="headline"><a href="<?php echo home_url(); ?>"><?php bloginfo('title'); ?></a></h1>
+							<h1 class="site_title" itemprop="headline"><a href="<?php echo esc_url(home_url()); ?>"><?php bloginfo('title'); ?></a></h1>
 						<?php else : ?>
 							<h1 class="site_title" itemprop="headline"><?php bloginfo('title'); ?></h1>
 						<?php endif; ?>

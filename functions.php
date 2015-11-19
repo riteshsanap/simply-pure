@@ -1,6 +1,6 @@
 <?php 
 
-load_theme_textdomain('purecss', get_template_directory() . '/languages');
+// load_theme_textdomain('simply-pure', get_template_directory() . '/languages');
 /************************************************************************************/
 /*	Add Theme Support	*/		
 /************************************************************************************/		
@@ -20,7 +20,7 @@ function simply_pure_theme_install() {
 	if ( ! isset( $content_width ) ) $content_width = 900;
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-			'primary'   => __( 'Primary menu', 'purecss' ),
+			'primary'   => __( 'Primary menu', 'simply-pure' ),
 	) );
 }
 add_action( 'after_setup_theme', 'simply_pure_theme_install' );
@@ -36,8 +36,8 @@ add_action( 'after_setup_theme', 'simply_pure_theme_install' );
  */
 function pure_sidebar_widgets() {
 	register_sidebars(3, array(
-        'name' => __('Footer - Widget Area %1$s', 'purecss'),
-        'description' => __('Footer Sidebar', 'purecss'),
+        'name' => __('Footer - Widget Area %1$s', 'simply-pure'),
+        'description' => __('Footer Sidebar', 'simply-pure'),
         'id' => 'footer-area',
         'before_widget' => '<div id="%1$s" class="%2$s widget">',
         'after_widget' => '</div>',
@@ -46,8 +46,8 @@ function pure_sidebar_widgets() {
     ));
 
 register_sidebars(3, array(
-        'name' => __('Post Footer - Widget Area %1$s', 'purecss'),
-        'description' => __('Footer Sidebar', 'purecss'),
+        'name' => __('Post Footer - Widget Area %1$s', 'simply-pure'),
+        'description' => __('Footer Sidebar', 'simply-pure'),
         'id' => 'post-footer',
         'before_widget' => '<div id="%1$s" class="%2$s widget">',
         'after_widget' => '</div>',
@@ -55,8 +55,8 @@ register_sidebars(3, array(
         'after_title' => '</h3>'
     ));
 register_sidebar(array(
-        'name' => __('Sidebar', 'purecss'),
-        'description' => __('Below Header', 'purecss'),
+        'name' => __('Sidebar', 'simply-pure'),
+        'description' => __('Below Header', 'simply-pure'),
         'id' => 'sidebar-area',
         'before_widget' => '<section id="%1$s" class="%2$s widget">',
         'after_widget' => '</section>',
@@ -99,14 +99,14 @@ function pure_author_link() {
 
 	$link = sprintf('<a href="%1$s" title="%2$s" rel="author" itemprop="url"><span itemprop="name">%3$s</span></a>',
 		esc_url( get_author_posts_url($authId, $niceName) ),
-		esc_attr( sprintf( __( 'Posts by %s', 'purecss' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'Posts by %s', 'simply-pure' ), get_the_author() ) ),
 		get_the_author()
 	);
-	$link = _x('Published by','author of a post','purecss').' <span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
+	$link = _x('Published by','author of a post','simply-pure').' <span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
 	return $link;
 }
 function pure_post_time() {
-	$time = _x('on','Publication date','purecss').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y', 'purecss')) . '</time>';
+	$time = _x('on','Publication date','simply-pure').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y', 'simply-pure')) . '</time>';
 	return $time;
 }
 
@@ -121,8 +121,8 @@ function pure_post_time() {
  */
 function pure_post_meta() {
 	echo '<p class="post-meta">';
-	echo sprintf( _x('%1$s %2$s %3$s','Meta informations order', 'purecss'), pure_author_link(), pure_categories(), pure_post_time());
-	edit_post_link(__('Edit','purecss'), ' - ');
+	echo sprintf( _x('%1$s %2$s %3$s','Meta informations order', 'simply-pure'), pure_author_link(), pure_categories(), pure_post_time());
+	edit_post_link(__('Edit','simply-pure'), ' - ');
 	echo '</p>';
 }
 
@@ -166,9 +166,9 @@ function pure_categories() {
 	if($categories){ 
 		foreach($categories as $category) {
 			$color = array_rand($colors, 1); // call One random value from the array
-			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf(__('View all posts in %s','purecss'), $category->name ) ) . '" class="post-category '.$colors[$color].'">'.$category->cat_name.'</a>'.$separator;
+			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf(__('View all posts in %s','simply-pure'), $category->name ) ) . '" class="post-category '.$colors[$color].'">'.$category->cat_name.'</a>'.$separator;
 		}
-		$output = _x('Under','Before categories','purecss').'<span itemprop="keywords">'. $output. '</span>';
+		$output = _x('Under','Before categories','simply-pure').'<span itemprop="keywords">'. $output. '</span>';
 	return (trim($output, $separator));
 	}
 
@@ -205,7 +205,7 @@ function purecss_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'purecss' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'simply-pure' ), max( $paged, $page ) );
 	}
 
 	return $title;
@@ -275,16 +275,16 @@ require get_template_directory(). '/customizer.php';
 function purecss_archive_title() {
 	$title = NULL;
 	if(is_archive()) {
-		$title = __('Archive: ','purecss'). single_month_title(' ', false);
+		$title = __('Archive: ','simply-pure'). single_month_title(' ', false);
 	}
 	if(is_category()) {
-		  $title = __('Category: ','purecss'). single_cat_title('', false);
+		  $title = __('Category: ','simply-pure'). single_cat_title('', false);
 	}
 	if(is_tag()) {
-		 $title = __('Tag: ','purecss'). single_tag_title('', false);
+		 $title = __('Tag: ','simply-pure'). single_tag_title('', false);
 	}
 	if(is_author()) {
-		$title = __('Author: ','purecss'). get_the_author();
+		$title = __('Author: ','simply-pure'). get_the_author();
 	}
 
 	return $title;

@@ -3,9 +3,9 @@
 		<?php if(is_home()) : ?>
 		<?php if (is_sticky() ) {
 			$sticky++;
-			echo '<h6 class="content-subhead">'.__('Sticky Posts', 'purecss').'</h6>';
+			echo '<h6 class="content-subhead">'.__('Sticky Posts', 'simply-pure').'</h6>';
 		 } elseif( ($sticky!=0 && $postCount == $sticky+1) || ($sticky==0 && $postCount==1)) {
-			echo '<h6 class="content-subhead">'.__('Recent Posts', 'purecss').'</h6>';
+			echo '<h6 class="content-subhead">'.__('Recent Posts', 'simply-pure').'</h6>';
 		}
 		//echo $postCount;
 		?>

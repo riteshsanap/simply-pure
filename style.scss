@@ -1,13 +1,15 @@
 /* 
 Theme Name: Simply Pure
-Theme URI:  http://wpden.net/simply-pure-wordpress-theme/
+Theme URI:  http://www.best2know.info/simply-pure-wordpress-theme/
 Author: Ritesh Sanap
-Author URI: http://wpden.net/
+Author URI: http://www.best2know.info/
 Version: 1.1.2
 Description: A Personal blogging wordpress theme, made with Yahoo's Pure CSS. Simply Pure is a responsive WordPress theme with Two-columns and 3 widget footer.
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, two-columns, responsive-layout, custom-menu, featured-images
+Text Domain: simply-pure
+Domain Path: /languages
 */
 //@import "compass/reset";
 @import "pure";
@@ -413,7 +415,20 @@ div.comment-list {
 	// border-bottom: 10px solid $red;
 }
 .screen-reader-text {
-	display: none;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+.screen-reader-text:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 .widget_calendar {
 	

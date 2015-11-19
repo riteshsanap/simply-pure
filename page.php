@@ -14,7 +14,7 @@
 				<?php pure_post_thumbnail(); ?>
 				<?php the_content(); ?>
 				<div class="navigation">
-				<?php wp_link_pages(array('next_or_number'=>'next', 'previouspagelink' => ' &laquo; '.__('Previous Page','purecss'), 'nextpagelink'=>__('Next Page','purecss').' &raquo;')); ?>
+				<?php wp_link_pages(array('next_or_number'=>'next', 'previouspagelink' => ' &laquo; '.__('Previous Page','simply-pure'), 'nextpagelink'=>__('Next Page','simply-pure').' &raquo;')); ?>
 				</div>
 
 			</div>

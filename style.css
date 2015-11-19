@@ -1928,6 +1928,7 @@ div.comment-list .comment-meta {
 
 .searchform input.searchbox {
   display: inline-block;
+  color: #666;
 }
 
 .widget {

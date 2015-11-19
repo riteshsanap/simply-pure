@@ -10,6 +10,7 @@
 4. Update to purecss 0.6 (grids.css is needed by a bug) (by Sebseb01)
 5. Small bugfixes
 6. Changed Text domain from 'purecss' to 'simply-pure'
+7. Added subtext color and Fixed Header (text & image) in Customizer
 
 
 /*

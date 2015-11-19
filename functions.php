@@ -12,7 +12,7 @@ function simply_pure_theme_install() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
-	add_theme_support( "custom-header", array('flex-height'=>true,'flex-width'=>true,));
+	add_theme_support( "custom-header", array('flex-height'=>true,'flex-width'=>true,'default-text-color'=>'000000'));
 	add_theme_support( "custom-background", array('default-color'=>'ffffff') );
 	add_editor_style( 'editor-style.css' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );

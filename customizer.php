@@ -3,6 +3,24 @@
  /*	Theme Customizer	*/		
  /************************************************************************************/		
  function purecss_customizer( $wp_customize ) {
+
+    $wp_customize->add_setting( 'subtext_color' , array(
+        'default'     => '#666666',
+        'transport'   => 'refresh',
+        'capability' => 'edit_theme_options', //Capability needed to tweak
+        'sanitize_callback'=>'sanitize_theme_values',
+    ) );
+
+    $wp_customize->add_control( 
+        new WP_Customize_Color_Control( 
+        $wp_customize, 
+        'subtext_color_control', 
+        array(
+            'label'      => __( 'Header Subtext Color', 'simply-pure' ),
+            'section'    => 'colors',
+            'settings'   => 'subtext_color',
+        ) ) 
+    );
  	$wp_customize->add_section('purecss_sidebar', array(
  		'title' => __('Theme Settings', 'simply-pure'),
  		'priority'=> 110
@@ -63,4 +81,15 @@
  function sanitize_theme_values($value) {
     return $value;    
  }
+
+ function simplypure_customize_css() { ?>
+    <style type="text/css">
+    .content .header , .content .header a{ color: #<?php echo get_header_textcolor(); ?>}
+    .content .header {background: #<?php echo get_background_color(); ?>  }
+    .content .header h2 {color: <?php echo get_theme_mod('subtext_color', '#666666'); ?>}
+    .content .header {background-image:url(<?php echo get_header_image(); ?>); background-position: center; background-size: cover; }
+    </style>
+<?php
+}
+add_action( 'wp_head', 'simplypure_customize_css');
 ?>

@@ -1,0 +1,348 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simply Pure\n"
+"POT-Creation-Date: 2015-11-19 19:26+0530\n"
+"PO-Revision-Date: 2015-11-19 19:27+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:4
+msgid "404 - Page not Found"
+msgstr ""
+
+#: 404.php:6
+msgid ""
+"The page you are looking for could not be found. Try the following Options:"
+msgstr ""
+
+#: 404.php:9
+msgid "Check the URL for any mistakes."
+msgstr ""
+
+#: 404.php:10 search.php:13
+#, php-format
+msgid "Try Visiting the <a href=\"%1$s\">Home Page</a>"
+msgstr ""
+
+#: 404.php:11
+msgid "Or Try searching for the Page :"
+msgstr ""
+
+#: comments.php:17 comments.php:115 comments.php:117
+msgid "Comment"
+msgstr ""
+
+#: comments.php:17
+msgid "Comments"
+msgstr ""
+
+#: comments.php:23
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:24
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:25
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:65
+msgctxt "after author of a citation"
+msgid "says:"
+msgstr ""
+
+#: comments.php:68
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:79
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: comments.php:79
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:103
+msgctxt "Add after all required fields"
+msgid "(Required)"
+msgstr ""
+
+#: comments.php:104
+msgid " \"<span class=\"required\">*</span>\" marked fields are required"
+msgstr ""
+
+#: comments.php:109
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:110
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:111
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:112
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:122
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:128
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:135
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:143 comments.php:144
+msgid "Name"
+msgstr ""
+
+#: comments.php:150 comments.php:151
+msgid "Email"
+msgstr ""
+
+#: comments.php:157 comments.php:158
+msgid "Website"
+msgstr ""
+
+#: comments.php:163
+msgid "Comments are closed."
+msgstr ""
+
+#: content-loop.php:6
+msgid "Sticky Posts"
+msgstr ""
+
+#: content-loop.php:8
+msgid "Recent Posts"
+msgstr ""
+
+#: customizer.php:19
+msgid "Header Subtext Color"
+msgstr ""
+
+#: customizer.php:25
+msgid "Theme Settings"
+msgstr ""
+
+#: customizer.php:37
+msgid "Sidebar Position"
+msgstr ""
+
+#: customizer.php:42
+msgid "Left"
+msgstr ""
+
+#: customizer.php:43
+msgid "Right"
+msgstr ""
+
+#: customizer.php:53
+msgid "Header Position"
+msgstr ""
+
+#: customizer.php:58
+msgid "Sidebar Top"
+msgstr ""
+
+#: customizer.php:59
+msgid "Content Top"
+msgstr ""
+
+#: customizer.php:60
+msgid "Display on Both"
+msgstr ""
+
+#: customizer.php:61
+msgid "Sidebar Top + (Content Top on Home Page)"
+msgstr ""
+
+#: customizer.php:74
+msgid "Display Avatar next to Post title"
+msgstr ""
+
+#: footer.php:18
+msgid "Theme by "
+msgstr ""
+
+#. Author URI of the plugin/theme
+#: footer.php:18
+msgid "http://www.best2know.info/"
+msgstr ""
+
+#: functions.php:23
+msgid "Primary menu"
+msgstr ""
+
+#: functions.php:39
+#, php-format
+msgid "Footer - Widget Area %1$s"
+msgstr ""
+
+#: functions.php:40 functions.php:50
+msgid "Footer Sidebar"
+msgstr ""
+
+#: functions.php:49
+#, php-format
+msgid "Post Footer - Widget Area %1$s"
+msgstr ""
+
+#: functions.php:58
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:59
+msgid "Below Header"
+msgstr ""
+
+#: functions.php:102
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: functions.php:105
+msgctxt "author of a post"
+msgid "Published by"
+msgstr ""
+
+#: functions.php:109
+msgctxt "Publication date"
+msgid "on"
+msgstr ""
+
+#: functions.php:109
+msgid "F j, Y"
+msgstr ""
+
+#: functions.php:124
+#, php-format
+msgctxt "Meta informations order"
+msgid "%1$s %2$s %3$s"
+msgstr ""
+
+#: functions.php:125
+msgid "Edit"
+msgstr ""
+
+#: functions.php:169
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: functions.php:171
+msgctxt "Before categories"
+msgid "Under"
+msgstr ""
+
+#: functions.php:208
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:278
+msgid "Archive: "
+msgstr ""
+
+#: functions.php:281
+msgid "Category: "
+msgstr ""
+
+#: functions.php:284
+msgid "Tag: "
+msgstr ""
+
+#: functions.php:287
+msgid "Author: "
+msgstr ""
+
+#: page.php:17
+msgid "Previous Page"
+msgstr ""
+
+#: page.php:17
+msgid "Next Page"
+msgstr ""
+
+#: pagination.php:2
+msgid "Previous Entries"
+msgstr ""
+
+#: pagination.php:3
+msgid "Next Entries"
+msgstr ""
+
+#: search.php:4
+msgid "Search results for: "
+msgstr ""
+
+#: search.php:7
+msgid "There are no content with this search keyword."
+msgstr ""
+
+#: search.php:9
+msgid "Try using a different search keyword:"
+msgstr ""
+
+#: search.php:16
+msgid "Or, Take a look at the Recent posts:"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search..."
+msgstr ""
+
+#: single.php:18
+msgid " &laquo; Previous Page"
+msgstr ""
+
+#: single.php:18
+msgid "Next Page &raquo;"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Simply Pure"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.best2know.info/simply-pure-wordpress-theme/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A Personal blogging wordpress theme, made with Yahoo's Pure CSS. Simply Pure "
+"is a responsive WordPress theme with Two-columns and 3 widget footer."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Ritesh Sanap"
+msgstr ""

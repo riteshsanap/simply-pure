@@ -4,7 +4,7 @@
 			<?php echo purecss_archive_title(); ?>
 		</h1>
 		<?php get_template_part('content-loop'); ?>
-		<?php include 'pagination.php'; ?>
+		<?php get_template_part('pagination.php'); ?>
 	</main>
 <div class="clearfix"></div>
 <?php get_footer(); ?>

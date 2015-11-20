@@ -2,13 +2,13 @@
 /************************************************************************************/
  /*	Theme Customizer	*/		
  /************************************************************************************/		
- function purecss_customizer( $wp_customize ) {
+ function simply_pure_customizer( $wp_customize ) {
 
     $wp_customize->add_setting( 'subtext_color' , array(
         'default'     => '#666666',
         'transport'   => 'refresh',
         'capability' => 'edit_theme_options', //Capability needed to tweak
-        'sanitize_callback'=>'sanitize_theme_values',
+        'sanitize_callback'=>'sanitize_hex_color',
     ) );
 
     $wp_customize->add_control( 
@@ -21,7 +21,7 @@
             'settings'   => 'subtext_color',
         ) ) 
     );
- 	$wp_customize->add_section('purecss_sidebar', array(
+ 	$wp_customize->add_section('simply_pure_sidebar', array(
  		'title' => __('Theme Settings', 'simply-pure'),
  		'priority'=> 110
  		));
@@ -30,12 +30,12 @@
     	'default'     => 'left',
     	'transport'   => 'refresh',
     	'capability' => 'edit_theme_options', //Capability needed to tweak
-        'sanitize_callback'=>'sanitize_theme_values'
+        'sanitize_callback'=>'simply_pure_sanitize_sidebar_position'
 	) );
 
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'purecss_sidebar_position_select', array(
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'simply_pure_sidebar_position_select', array(
 	'label'        => __( 'Sidebar Position', 'simply-pure' ),
-	'section'    => 'purecss_sidebar',
+	'section'    => 'simply_pure_sidebar',
 	'settings'   => 'sidebar_position',
 	'type' => 'radio',
 	'choices' => array(
@@ -47,11 +47,11 @@
     	'transport'=>'refresh',
     	'capability'=>'edit_theme_options',
     	'default'=>'content-top-home',
-        'sanitize_callback'=>'sanitize_theme_values'
+        'sanitize_callback'=>'simply_pure_sanitize_header_position'
     	));
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'purecss_header_position', array(
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'simply_pure_header_position', array(
     	'label' => __('Header Position','simply-pure'),
-    	'section' =>'purecss_sidebar',
+    	'section' =>'simply_pure_sidebar',
     	'settings' =>'header_position',
     	'type' => 'select',
     	'choices' => array(
@@ -66,30 +66,55 @@
         'default'        => true,
         'transport'=>'refresh',
         'capability'=>'edit_theme_options',
-        'sanitize_callback'=>'sanitize_theme_values'
+        'sanitize_callback'=>'simply_pure_sanitize_avatar_display'
     ) );
     
     $wp_customize->add_control( 'display_avatar_control', array(
         'settings' => 'display_avatar',
         'label'    => __( 'Display Avatar next to Post title', 'simply-pure'),
-        'section'  => 'purecss_sidebar',
+        'section'  => 'simply_pure_sidebar',
         'type'     => 'checkbox',
         ) );
  }
- add_action( 'customize_register', 'purecss_customizer' ); 
+ add_action( 'customize_register', 'simply_pure_customizer' ); 
 
- function sanitize_theme_values($value) {
-    return $value;    
+/************************************************************************************/
+/*    Sanitization functions    */        
+/************************************************************************************/        
+ /**
+  * Sanitization for Header Display Position
+  */
+ function simply_pure_sanitize_header_position ($pos) {
+    if ( ! in_array( $pos, array( 'sidebar-top', 'content-top', 'both', 'content-top-home' ) ) )
+        $pos = 'content-top-home';
+    return $pos;
+ }
+ /**
+  * Sanitization for Sidebar Position
+  */
+ function simply_pure_sanitize_sidebar_position ($pos) {
+    if ( ! in_array( $pos, array( 'left', 'right' ) ) )
+        $pos = 'left';
+    return $pos;
  }
 
- function simplypure_customize_css() { ?>
+ /**
+  * Sanitization for Avatar Display
+  */
+ function simply_pure_sanitize_avatar_display ($value) {
+    if ( ! in_array( $value, array( true, false ) ) )
+        $value = true;
+    return $value;
+ }
+
+ function simply_pure_customize_css() { ?>
     <style type="text/css">
     .content .header , .content .header a{ color: #<?php echo get_header_textcolor(); ?>}
     .content .header {background: #<?php echo get_background_color(); ?>  }
     .content .header h2 {color: <?php echo get_theme_mod('subtext_color', '#666666'); ?>}
-    .content .header {background-image:url(<?php echo get_header_image(); ?>); background-position: center; background-size: cover; }
+    .content .header {background-image:url(<?php echo esc_url(get_header_image()); ?>); background-position: center; background-size: cover; }
     </style>
 <?php
 }
-add_action( 'wp_head', 'simplypure_customize_css');
+add_action( 'wp_head', 'simply_pure_customize_css');
 ?>

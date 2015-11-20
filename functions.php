@@ -73,7 +73,7 @@ add_action('widgets_init', 'pure_sidebar_widgets');
  * @author Ritesh Sanap <riteshsanap@gmail.com>
  *
  */
-function purecss_scripts_styles() {
+function simply_pure_scripts_styles() {
 	/**
 	 * Enqueue StyleSheet
 	 */
@@ -89,7 +89,7 @@ function purecss_scripts_styles() {
 		wp_enqueue_script('purecss-script', get_template_directory_uri(). '/script.js', array(), '0.1', true);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'purecss_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'simply_pure_scripts_styles' );
 
 function pure_author_link() {
 
@@ -186,7 +186,7 @@ function pure_categories() {
  * @return string The filtered title.
  */
 
-function purecss_wp_title( $title, $sep ) {
+function simply_pure_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -209,7 +209,7 @@ function purecss_wp_title( $title, $sep ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'purecss_wp_title', 10, 2 );
+add_filter( 'wp_title', 'simply_pure_wp_title', 10, 2 );
 /**
  * Counts the number of sidebars with atleast a Single Widget
  * for more information visit : 
@@ -271,7 +271,7 @@ function pure_body_classes($classes) {
 add_filter( 'body_class', 'pure_body_classes' );
 require get_template_directory(). '/customizer.php';
 
-function purecss_archive_title() {
+function simply_pure_archive_title() {
 	$title = NULL;
 	if(is_archive()) {
 		$title = __('Archive: ','simply-pure'). single_month_title(' ', false);

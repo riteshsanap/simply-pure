@@ -17,7 +17,7 @@ if ( post_password_required() ) {
  		<h3 class="content-subhead"><?php echo $commCount; ?> <?php echo $commCount == 1 ? __('Comment', 'simply-pure') : __('Comments', 'simply-pure') ?></h3>
  	<?php endif ?>
  <div class="comment-list">
-    <?php wp_list_comments( array( 'style' => 'div','echo'=>1, 'callback'=>'purecss_comments','avatar_size'=>48, 'depth'=>10 ) ); ?>
+    <?php wp_list_comments( array( 'style' => 'div','echo'=>1, 'callback'=>'simply_pure_comments','avatar_size'=>48, 'depth'=>10 ) ); ?>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 		<h1 class="screen-reader-text content-subhead"><?php _e( 'Comment navigation', 'simply-pure' ); ?></h1>
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
  * @param   integer   $depth
  * @return  string	List of all Comments
  */
-function purecss_comments($comment, $args, $depth) {
+function simply_pure_comments($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
 

@@ -109,9 +109,9 @@
 
  function simply_pure_customize_css() { ?>
     <style type="text/css">
-    .content .header , .content .header a{ color: #<?php echo get_header_textcolor(); ?>}
-    .content .header {background: #<?php echo get_background_color(); ?>  }
-    .content .header h2 {color: <?php echo get_theme_mod('subtext_color', '#666666'); ?>}
+    .content .header , .content .header a{ color: #<?php echo esc_attr(get_header_textcolor()); ?>}
+    .content .header {background: #<?php echo esc_attr(get_background_color()); ?>  }
+    .content .header h2 {color: <?php echo esc_attr(get_theme_mod('subtext_color', '#666666')); ?>}
     .content .header {background-image:url(<?php echo esc_url(get_header_image()); ?>); background-position: center; background-size: cover; }
     </style>
 <?php

@@ -1,6 +1,4 @@
 <?php 
-
-// load_theme_textdomain('simply-pure', get_template_directory() . '/languages');
 /************************************************************************************/
 /*	Add Theme Support	*/		
 /************************************************************************************/		
@@ -16,6 +14,7 @@ function simply_pure_theme_install() {
 	add_theme_support( "custom-background", array('default-color'=>'ffffff') );
 	add_editor_style( 'editor-style.css' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+	load_theme_textdomain('simply-pure', get_template_directory() . '/languages');
 	// setting  $content_width to avoid overflow of videos and images added by wordpress media gallery
 	if ( ! isset( $content_width ) ) $content_width = 900;
 	// This theme uses wp_nav_menu() in two locations.

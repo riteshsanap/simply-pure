@@ -88,9 +88,8 @@ function simply_pure_comments($comment, $args, $depth) {
 	</div>
 	<?php endif; ?>
 <?php
-}
- ?>
-<?php 
+} // end simply_pure_comments()
+
 /**
  * Comment Form Overwrite
  *

@@ -9,7 +9,7 @@
 			<li><?php _e('Check the URL for any mistakes.', 'simply-pure'); ?></li>
 			<li><?php echo sprintf(__('Try Visiting the <a href="%1$s">Home Page</a>', 'simply-pure'),  esc_url(home_url()));?></li>
 			<li><?php _e('Or Try searching for the Page :', 'simply-pure'); ?>
-			<?php get_template_part('searchform'); ?>
+			<?php get_search_form(); ?>
 			</li>
 		</ul>
 		

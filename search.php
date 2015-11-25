@@ -7,7 +7,7 @@
 			<h3><?php _e('There are no content with this search keyword.', 'simply-pure');?></h3>
 			<ul class="list404">
 				<li><?php _e('Try using a different search keyword:', 'simply-pure');?>
-					<?php get_template_part('searchform'); ?>
+					<?php get_search_form(); ?>
 				</li>
 				<li>
 					<?php echo sprintf(__('Try Visiting the <a href="%1$s">Home Page</a>', 'simply-pure'),  esc_url(home_url()));?>

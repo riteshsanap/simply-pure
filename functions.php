@@ -297,6 +297,41 @@ function simply_pure_archive_title() {
 	return $title;
 }
 /**
+ * Modify Comment Fields output
+ */
+function simply_pure_alter_comments_field($fields) {
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$reqstr = _x('(Required)','Add after all required fields','simply-pure');
+	$required_text = __(' "<span class="required">*</span>" marked fields are required', 'simply-pure');
+	$aria_req = ( $req ? " aria-required='true' required" : '' );
+
+	  $fields['author'] =
+      '<div class="comment-form-author pure-control-group">' .
+	  '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+      '" class="pure-input-1-2" placeholder="'.__('Name', 'simply-pure').' '.$reqstr.'"' . $aria_req . '/>'.
+      '<label for="author">' . __( 'Name', 'simply-pure' ) . '</label>'.
+      '</div>';
+
+    $fields['email'] =
+      '<div class="comment-form-email pure-control-group">'.
+      '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+      '" class="pure-input-1-2" placeholder="'.__('Email', 'simply-pure').' '.$reqstr.'"' . $aria_req . '/>'.
+      '<label for="email">' . __( 'Email', 'simply-pure' ). '</label>'.
+      '</div>';
+
+    $fields['url'] =
+      '<div class="comment-form-url pure-control-group">'.
+      '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+      '" class="pure-input-1-2" placeholder="'.__('Website', 'simply-pure').'"/>'.
+      '<label for="url">' . __( 'Website', 'simply-pure' ) . '</label>' .'</div>';
+
+	return $fields;
+}
+
+add_filter('comment_form_default_fields', 'simply_pure_alter_comments_field');
+
+/**
  * Adding Customizer
  */
 require get_template_directory(). '/customizer.php';

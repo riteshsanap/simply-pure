@@ -5,6 +5,8 @@
  * TBA - version 1.1.4
  */
 1. Adding PureCSS unminified files and License
+2. Changed prefix 'pure' to 'simply_pure'
+3. Moved Comment fields to functions.php
 
 /**
  * 20/11/2015 - version 1.1.3

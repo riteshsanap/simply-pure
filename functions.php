@@ -38,7 +38,7 @@ if ( ! isset( $content_width ) ) {
  * @author Ritesh Sanap <riteshsanap@gmail.com>
  *
  */
-function pure_sidebar_widgets() {
+function simply_pure_sidebar_widgets() {
 	register_sidebars(3, array(
         'name' => __('Footer - Widget Area %1$s', 'simply-pure'),
         'description' => __('Footer Sidebar', 'simply-pure'),
@@ -69,7 +69,7 @@ register_sidebar(array(
     ));
 
 }
-add_action('widgets_init', 'pure_sidebar_widgets');
+add_action('widgets_init', 'simply_pure_sidebar_widgets');
 /**
  * Add Stylesheet and scripts
  *
@@ -82,7 +82,7 @@ function simply_pure_scripts_styles() {
 	/**
 	 * Enqueue StyleSheet
 	 */
-	wp_enqueue_style( 'purecss-style', get_stylesheet_uri(), array(), '0.3');
+	wp_enqueue_style( 'simply-pure-style', get_stylesheet_uri(), array(), '0.4');
 
 	/**
 	 * Add JavaScript to animate Sidebar, when the sidebar is active i.e. atleast has 1 widget
@@ -91,12 +91,12 @@ function simply_pure_scripts_styles() {
 		/**
 		 * The Below script should be added in the footer so $in_footer is set to true
 		 */
-		wp_enqueue_script('purecss-script', get_template_directory_uri(). '/script.js', array(), '0.1', true);
+		wp_enqueue_script('simply-pure-script', get_template_directory_uri(). '/script.js', array(), '0.1', true);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'simply_pure_scripts_styles' );
 
-function pure_author_link() {
+function simply_pure_author_link() {
 
 	$authId = get_the_author_meta('ID');
 	$niceName = get_the_author_meta('user_nicename');
@@ -109,7 +109,7 @@ function pure_author_link() {
 	$link = _x('Published by','author of a post','simply-pure').' <span class="entry-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">'. $link. '</span>';
 	return $link;
 }
-function pure_post_time() {
+function simply_pure_post_time() {
 	$time = _x('on','Publication date','simply-pure').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y', 'simply-pure')) . '</time>';
 	return $time;
 }
@@ -123,9 +123,13 @@ function pure_post_time() {
  *
  * @return  string Simple HTML string
  */
-function pure_post_meta() {
+function simply_pure_post_meta() {
 	echo '<p class="post-meta">';
-	echo sprintf( _x('%1$s %2$s %3$s','Meta informations order', 'simply-pure'), pure_author_link(), pure_categories(), pure_post_time());
+	printf( '%1$s %2$s %3$s', 
+        simply_pure_author_link(), 
+        simply_pure_categories(), 
+        simply_pure_post_time()
+	);
 	edit_post_link(__('Edit','simply-pure'), ' - ');
 	echo '</p>';
 }
@@ -139,7 +143,7 @@ function pure_post_meta() {
  *
  * @return  string 
  */
-function pure_post_thumbnail() {
+function simply_pure_post_thumbnail() {
 	// Check if the post has the thumbnail
 	// && if it is blank or not
 	if(has_post_thumbnail() && '' != get_the_post_thumbnail()) {
@@ -158,7 +162,7 @@ function pure_post_thumbnail() {
  * 
  * @return  string Output echo'ed
  */
-function pure_categories() {
+function simply_pure_categories() {
 	// get post categories
 	$categories = get_the_category();
 
@@ -227,7 +231,7 @@ add_filter( 'wp_title', 'simply_pure_wp_title', 10, 2 );
  * @param   Array   $sidebars the List of sidebars that are active
  * @return  integer
  */
-function pure_sidebar_active_count($sidebars) {
+function simply_pure_sidebar_active_count($sidebars) {
 	$count = 0;
 	foreach ($sidebars as $sidebar) {
 		if(is_active_sidebar($sidebar)) {
@@ -246,7 +250,7 @@ function pure_sidebar_active_count($sidebars) {
  * @param   string   $position
  * @return  string
  */
-function pure_sidebars_class($position) {
+function simply_pure_sidebars_class($position) {
 	$sidebars = array();
 	if($position == 'post-footer') {
 		$sidebars = array('post-footer','post-footer-2','post-footer-3');
@@ -255,10 +259,10 @@ function pure_sidebars_class($position) {
 	}
 
 	$class = 'pure-u-1';
-	$class .= ' pure-u-sm-1-'. pure_sidebar_active_count($sidebars);
+	$class .= ' pure-u-sm-1-'. simply_pure_sidebar_active_count($sidebars);
 	return $class;
 }
-function pure_body_classes($classes) {
+function simply_pure_body_classes($classes) {
 	if(get_theme_mod('sidebar_position') != 'right') {
 		$classes[] = 'sidebar-left';
 	}
@@ -273,8 +277,7 @@ function pure_body_classes($classes) {
 	}
 	return $classes;
 }
-add_filter( 'body_class', 'pure_body_classes' );
-require get_template_directory(). '/customizer.php';
+add_filter( 'body_class', 'simply_pure_body_classes' );
 
 function simply_pure_archive_title() {
 	$title = NULL;
@@ -293,3 +296,7 @@ function simply_pure_archive_title() {
 
 	return $title;
 }
+/**
+ * Adding Customizer
+ */
+require get_template_directory(). '/customizer.php';

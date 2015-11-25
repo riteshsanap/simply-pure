@@ -8,10 +8,10 @@
 				<h1 class="post-title">
 					<?php the_title(); ?>
 				</h1>
-				<?php pure_post_meta(); ?>
+				<?php simply_pure_post_meta(); ?>
 			</div>
 			<div class="post-body">
-				<?php pure_post_thumbnail(); ?>
+				<?php simply_pure_post_thumbnail(); ?>
 				<?php the_content(); ?>
 				<div class="navigation">
 				<?php wp_link_pages(array('next_or_number'=>'next', 'previouspagelink' => ' &laquo; '.__('Previous Page','simply-pure'), 'nextpagelink'=>__('Next Page','simply-pure').' &raquo;')); ?>

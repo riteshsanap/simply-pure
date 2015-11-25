@@ -33,7 +33,7 @@ if ( post_password_required() ) {
  * Comments List Display
  *
  * @version 1.0
- * @since   Pure CSS 1.0
+ * @since   Simply Pure 1.0
  * @author Ritesh Sanap <riteshsanap@gmail.com>
  *
  * @param   string   $comment
@@ -94,7 +94,7 @@ function simply_pure_comments($comment, $args, $depth) {
  * Comment Form Overwrite
  *
  * @version 1.0
- * @since Pure CSS 1.0
+ * @since Simply Pure 1.0
  * @return string HTML comment form
  */
 $commenter = wp_get_current_commenter();

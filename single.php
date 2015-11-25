@@ -9,10 +9,10 @@
 					<?php echo get_avatar( get_the_author_meta( 'ID' ), 48); ?>
 					<?php the_title(); ?>
 				</h1>
-				<?php pure_post_meta(); ?>
+				<?php simply_pure_post_meta(); ?>
 			</div>
 			<div class="post-body">
-				<?php pure_post_thumbnail(); ?>
+				<?php simply_pure_post_thumbnail(); ?>
 				<?php the_content(); ?>
 				<div class="navigation">
 				<?php wp_link_pages(array('next_or_number'=>'next', 'previouspagelink' => __(' &laquo; Previous Page', 'simply-pure'), 'nextpagelink'=> __('Next Page &raquo;', 'simply-pure'))); ?>

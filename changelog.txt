@@ -2,6 +2,11 @@
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/	
 /**
+ * TBA - version 1.1.4
+ */
+1. Adding PureCSS unminified files and License
+
+/**
  * 20/11/2015 - version 1.1.3
  */
 1. Translable searchbutton & Loading translations

@@ -6,7 +6,7 @@
  */
 1. Fixed pagination
 2. added word-wrap for posts
-
+3. added support for post with titles displaying permalinks in post Date
 
 /**
  * 26/11/2015 - version 1.1.4

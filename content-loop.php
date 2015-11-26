@@ -13,12 +13,19 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
 			<header class="post-header">
+			<?php if(get_the_title()) : ?>
 				<h2 class="post-title" itemprop="headline">
 				<?php if(get_theme_mod('display_avatar', true)) { 
 					echo get_avatar( get_the_author_meta( 'ID' ), 48); 
 				} ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h2>
+			<?php else :
+					 if(get_theme_mod('display_avatar', true)) { 
+						echo get_avatar( get_the_author_meta( 'ID' ), 48); 
+					}
+			 endif; ?>
+
 				<?php simply_pure_post_meta(); ?>
 			</header>
 			<div class="post-body" itemprop="articleBody">

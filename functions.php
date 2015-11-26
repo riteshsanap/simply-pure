@@ -117,6 +117,10 @@ function simply_pure_author_link() {
 }
 function simply_pure_post_time() {
 	$time = _x('on','Publication date','simply-pure').' <time itemprop="datePublished" datetime="'. get_the_time('c').'">'. get_the_time(__('F j, Y', 'simply-pure')) . '</time>';
+	if(!get_the_title()) {
+		$time = _x('on','Publication date','simply-pure').' <time itemprop="datePublished" datetime="'. get_the_time('c').'"><a rel="bookmark" href="'.get_the_permalink().'">'. get_the_time(__('F j, Y', 'simply-pure')) . '</a></time>';
+	}
+	
 	return $time;
 }
 

@@ -7,7 +7,11 @@
 			<div class="post-header">
 				<h1 class="post-title">
 					<?php echo get_avatar( get_the_author_meta( 'ID' ), 48); ?>
-					<?php the_title(); ?>
+					<?php if(get_the_title()) {
+						the_title();
+					} else {
+						echo 'Published on '.get_the_time(__('F j, Y', 'simply-pure')).' at '.get_the_time(__('g:i a', 'simply-pure'));
+					} ?>
 				</h1>
 				<?php simply_pure_post_meta(); ?>
 			</div>

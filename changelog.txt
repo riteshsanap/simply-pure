@@ -2,7 +2,7 @@
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/	
 /**
- * TBA - versions 1.1.5
+ * 26/11/2015 - version 1.1.5
  */
 1. Fixed pagination
 2. added word-wrap for posts

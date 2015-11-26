@@ -33,5 +33,6 @@
 				<?php the_content(); ?>
 				<?php wp_link_pages(); ?>
 			</div>
+			<div class="clearfix"></div>
 		</article>
 		<?php endwhile; endif; ?>

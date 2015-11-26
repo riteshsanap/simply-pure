@@ -2,6 +2,13 @@
 /*	Changelog for Simply Pure WordPress Theme	*/		
 /************************************************************************************/	
 /**
+ * TBA - versions 1.1.5
+ */
+1. Fixed pagination
+2. added word-wrap for posts
+
+
+/**
  * 26/11/2015 - version 1.1.4
  */
 1. Adding PureCSS unminified files and License
@@ -10,7 +17,7 @@
 4. escaping $tag in comments.php
 5. Moving comments reply script from header.php to functions.php
 6. removing html5 support for search form
-7. fixing pagination
+
 
 /**
  * 20/11/2015 - version 1.1.3

@@ -3,7 +3,7 @@ Theme Name: Simply Pure
 Theme URI:  http://www.best2know.info/simply-pure-wordpress-theme/
 Author: Ritesh Sanap
 Author URI: http://www.best2know.info/
-Version: 1.1.4
+Version: 1.1.5
 Description: A Personal blogging wordpress theme, made with Yahoo's Pure CSS. Simply Pure is a responsive WordPress theme with Two-columns and 3 widget footer.
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -139,6 +139,7 @@ h3 {
 
 .post {
     padding-bottom: 2em;
+    word-wrap: break-word;
 }
 .post-title {
     font-size: 2em;

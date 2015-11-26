@@ -14,7 +14,7 @@ function simply_pure_theme_install() {
 	add_theme_support( "custom-header", array('flex-height'=>true,'flex-width'=>true,'default-text-color'=>'000000'));
 	add_theme_support( "custom-background", array('default-color'=>'ffffff') );
 	add_editor_style( 'editor-style.css' );
-	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 	load_theme_textdomain('simply-pure', get_template_directory() . '/languages');
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -93,6 +93,12 @@ function simply_pure_scripts_styles() {
 		 */
 		wp_enqueue_script('simply-pure-script', get_template_directory_uri(). '/script.js', array(), '0.1', true);
 	}
+	if ( is_singular() ) {
+		/**
+		 * Adding comment Reply script
+		 */
+		wp_enqueue_script( "comment-reply" ); 	
+	} 
 }
 add_action( 'wp_enqueue_scripts', 'simply_pure_scripts_styles' );
 
